@@ -1,0 +1,55 @@
+{
+    "points": [
+        {
+            "no": 1,
+            "lat": 28.6139,
+            "lon": 77.2090,
+            "list_content": [
+                {
+                    "subno": 1,
+                    "content": "Delhi - Capital of India",
+                    "prevno": -1,
+                    "prevsubno": -1, 
+                    "nextno": 2,
+                    "nextsubno": 1
+                },
+                {
+                    "subno": 2,
+                    "content": "Delhi - second popup",
+                    "prevno": 2,
+                    "prevsubno": 1, 
+                    "nextno": 3,
+                    "nextsubno": 1
+                }
+            ]
+        },
+        {
+            "no": 2,
+            "lat": 26.83928000,
+            "lon": 80.92313000,
+            "list_content": [
+                {
+                    "content": "UP - Yash being lucknow ka khiladi",
+                    "prevno": 1,
+                    "prevsubno": 1, 
+                    "nextno": 1,
+                    "nextsubno": 2
+                }
+            ]
+        },
+        {
+            "no": 3,
+            "lat": 19.07283000,
+            "lon": 72.88261000,
+            "list_content": [
+                {
+                    "content": "Mumbai - Gateway of India",
+                    "prevno": 1,
+                    "prevsubno": 2, 
+                    "nextno": 1,
+                    "nextsubno": 1
+                }
+            ]
+        }
+    ]
+}
