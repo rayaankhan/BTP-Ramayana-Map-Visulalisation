@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Legends Of Ramayana</title>
+</head>
+
+<body>
+  <script src="yourscript.js"></script>
+  <div id="navbar">
+    <div id="logo">
+      <button id="sidebar-toggle">☰</button>
+      <a href="/">Legends Of Ramayana</a>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Important Learnings</a></li>
+        <li><a href="#">Guide</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="sidebar">
+    <!-- Modal Buttons -->
+    <ul>
+      <li><button class="modal-open" data-modal="modal1">Complete Ramayana</button></li>
+      <li><button class="modal-open" data-modal="modal2">Summary</button></li>
+      <li><button class="modal-open" data-modal="modal3">Origins of Lord Rama</button></li>
+      <li><button class="modal-open" data-modal="modal4">Origins of Ravana</button></li>
+      <li><button class="modal-open" data-modal="modal5">Other Characters</button></li>
+    </ul>
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <div class="modal-header">
+          Complete Ramayana
+        </div>
+        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="link modal-close">Close Modal</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <div class="modal-header">
+          Summary
+        </div>
+        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="link modal-close">Close Modal</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <div class="modal-header">
+          Origins of Lord Rama
+        </div>
+        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="link modal-close">Close Modal</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal4">
+      <div class="modal-content">
+        <div class="modal-header">
+          Origins of Ravana
+        </div>
+        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="link modal-close">Close Modal</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal5">
+      <div class="modal-content">
+        <div class="modal-header">
+          Other Characters
+        </div>
+        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="link modal-close">Close Modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="map" style="height: 100vh;"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/yourscript.js"></script>
+</body>
+
+</html>
