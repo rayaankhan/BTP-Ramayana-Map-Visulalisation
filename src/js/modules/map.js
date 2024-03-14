@@ -12,13 +12,13 @@ export const initializeMap = () => {
 };
 
 // Points data retrieval module
-export const getPointsData = async (data_path) => {
+export const getData = async (data_path) => {
   try {
     const response = await fetch(data_path);
     // console.log(response);
     const data = await response.json();
     // console.log(data);
-    return data.points || [];
+    return data;
   } catch (error) {
     console.error("Error fetching data:", error);
     return [];
