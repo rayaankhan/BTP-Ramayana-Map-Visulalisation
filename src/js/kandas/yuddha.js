@@ -4,6 +4,7 @@ import { createCirclesAndArrowsWithList } from '../modules/circleArrow.js';
 import { setupSidebar, setupNavbarLinks, setupModals } from '../modules/setup.js';
 const data_path = "../../../json/kandas/yuddha.json";
 const location_file_path = "../../../json/location.json";
+const marker_color = "yellow";
 
 console.log("Yuddha")
 
@@ -15,7 +16,7 @@ const map = initializeMap();
 getData(data_path).then((pointsData) => {
   // console.log(pointsData);
   getData(location_file_path).then((location_data) => {
-    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data);
+    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_colorv;
   });
 });
 setupSidebar();

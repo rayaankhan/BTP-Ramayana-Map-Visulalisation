@@ -1,4 +1,5 @@
 import { toggleArrows } from "./circleArrow.js";
+import { zoomSetter } from "./map.js";
 
 // Popup with buttons module for list content
 export const openPopupWithList = (idx, arrows, map, pointsData, locations_data) => {
@@ -68,6 +69,7 @@ const buttonCreator = (button_name, idx, pointsData, arrows, map, locations_data
   const Button = createButtonWithOnclick(button_name, () => {
     toggleArrows(idx, arrows);
     openPopupWithList(idx, arrows, map, pointsData, locations_data);
+    zoomSetter(arrows, idx, map);
   });
   return Button;
 };

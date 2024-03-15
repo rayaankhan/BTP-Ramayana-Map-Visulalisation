@@ -9,7 +9,7 @@ console.log("Bala")
 
 // Main execution
 const map = initializeMap();
-console.log(map);
+// console.log(map);
 
 // console.log(location_data)
 getData(data_path).then((pointsData) => {
