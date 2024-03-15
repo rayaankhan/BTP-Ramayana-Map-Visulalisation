@@ -80,4 +80,4 @@ This project aims to create an interactive map that provides an engaging and inf
 
 - Leaflet: [leafletjs.com](https://leafletjs.com/)
 
--
+
