@@ -1,167 +1,157 @@
 /* Reset styles */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Global styles */
-  
-  body {
-    font-family: sans-serif;
-  }
-  
-  /* Navbar styles */
-  
-  #navbar {
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
-  
-  #logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  #logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  
-  #sidebar-toggle {
-    margin-right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  #menu {
-    margin-right: 20px;
-  }
-  
-  #menu ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  #menu li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #menu a {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  #menu a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Sidebar styles */
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar styles */
+#navbar {
+  width: 100%;
+  height: 90px;
+  background-color: rgb(44, 43, 43);
+  color: rgb(255, 111, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+#navbar a {
+  color: rgb(255, 98, 0);
+}
+#logo {
+  display: flex;
+  align-items: center;
+}
+#logo-img {
+  width: 100px;
+  margin-right: -30px;
+}
+#logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(240, 100, 6);
+  text-decoration: none;
+  margin-left: 20px;
+}
+#sidebar-toggle {
+  margin-right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#menu {
+  margin-right: 20px;
+}
+#menu ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+#menu li {
+  margin: 0;
+  padding: 0;
+}
+#menu a {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: rgb(240, 100, 6);
+  text-decoration: none;
+}
+#menu a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar styles */
+#sidebar {
+  width: 175px;
+  height: calc(100vh - 60px);
+  background-color: rgba(44, 43, 43, 0.95);
+  color: white;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1500;
+}
+#sidebar.closed {
+  left: -175px;
+}
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#sidebar li {
+  margin: 0;
+  padding: 10px;
+}
+#sidebar button.modal-open {
+  font-family: 'Playfair Display', serif;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: rgb(240, 100, 6);
+  font-size: 16px;
+  text-align: left;
+}
+#sidebar button.modal-open:hover {
+  color: white;
+}
+#sidebar a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+#sidebar a:hover {
+  text-decoration: underline;
+}
+.sidebar-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Map styles */
+#map {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
   #sidebar {
-    width: 250px;
-    height: calc(100vh - 50px);
-    background-color: black;
-    color: white;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
-  }
-  
-  #sidebar.closed {
-    left: -250px;
-  }
-  
-  #sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #sidebar li {
-    margin: 0;
-    padding: 10px;
-  }
-  
-  #sidebar a {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  #sidebar a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Map styles */
-  
-  #map {
     position: absolute;
     top: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: -250px;
+    transition: left 0.3s ease-in-out;
   }
-  
-  /* Media queries */
-  
-  @media screen and (max-width: 1024px) {
-    #sidebar {
-      position: absolute;
-      top: 50px;
-      left: -250px;
-      transition: left 0.3s ease-in-out;
-    }
-  }
-/* styles.css */
-.custom-popup {
-  min-width: 150px;
-  max-height: 150px; 
-  max-width: 200px;
-  overflow-y: auto;
 }
-.modal-open{
-  padding: 8px 16px;
-  background: royalblue;
-  color: white;
-  border-radius: 4px;
-  outline: none;
-  border: none;
 
-
-}
-.modal{
+/* Modal styles */
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.5);
+  background-color: rgba(44, 43, 43, 0.6);
   z-index: 2;
   display: none;
   justify-content: center;
 }
-.modal-content{
-  background: #fff;
-  margin-top: 100px;
+.modal-content {
+  background: #3b3a3a;
+  margin-top: 40px;
   width: 85%;
   height: 85%;
   margin-left: auto;
@@ -169,38 +159,261 @@
   padding: 8px 24px;
   border-radius: 4px;
   z-index: 4;
+  display: flex;
+  flex-direction: column;
 }
-.modal-header{
+.modal-header {
   font-weight: 500;
-  padding: 50px 0;
+  padding: 10px 0;
   font-size: 26px;
-  color: black;
+  color: rgb(240, 100, 6);
   justify-content: center;
+  text-align: center;
 }
-.modal-header .modal-close{
+.modal-header .modal-close {
   float: right;
   font-size: 20px;
   background: #efefef;
   border: 0;
   outline: 0;
-  padding: 15px 8px;
+  padding: 4px 10px;
   border-radius: 50%;
 }
+.modal-header .modal-close:hover {
+  background-color: rgb(240, 100, 6);
+  color: white;
+}
 .modal-body {
+  flex: 1;
+  display: flex;
   color: #7b7b7b;
-  padding: 15px 0;
-  max-height:900px; /* Set the maximum height of the modal body */
-  overflow-y: auto; /* Enable vertical scroll if content exceeds the maximum height */
+  padding: 10px 0;
+  max-height: 900px;
+  overflow-y: auto;
 }
-.modal-footer{
+.modal-content-left {
+  flex: 3;
+  padding-right: 10px;
+  overflow-y: auto;
+  color: white;
+  display: block;
+}
+.modal-content-right {
+  flex: 1;
+  padding-left: 10px;
+  max-height: 50%;
+  overflow-y: auto;
+}
+.modal-footer {
   padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
 }
-.modal-footer .modal-close{
+.modal-footer .modal-close {
   padding: 8px 16px;
   font-size: 14px;
   border: none;
   outline: none;
   border-radius: 4px;
-  color: #1a73e8;
-
+  color: rgb(240, 100, 6);
+  background-color: rgba(44, 43, 43, 0.8);
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
 }
+
+/* Footer styles */
+footer {
+  background-color: #2323230a;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1600;
+}
+.modal-footer .modal-close:hover {
+  color: white;
+  background-color: rgb(240, 100, 6);
+}
+.footer-button {
+  font-family: 'Playfair Display', serif;
+  padding: 10px 20px;
+  background-color: rgb(44, 43, 43);
+  color: rgb(240, 100, 6);
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer-button:hover {
+  background-color: rgb(240, 100, 6);
+  color: white;
+}
+#footer-sidebar {
+  font-family: 'Playfair Display', serif;
+  position: fixed;
+  bottom: 0;
+  right: 45%;
+  background-color:transparent;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+#footer-toggle-btn {
+  background-color: rgb(44, 43, 43);
+  color: rgb(240, 100, 6);
+  border: 1px solid rgb(240, 100, 6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#footer-toggle-btn:hover {
+  background-color: rgb(240, 100, 6);
+  color: white;
+}
+
+#footer-buttons {
+  display: none; /* Initially hide the footer buttons */
+}
+
+#footer-sidebar.active {
+  right: 24.5%; /* Show the sidebar */
+}
+#footer-sidebar.active #footer-toggle-btn{
+  background-color: rgb(44, 43, 43);
+  color: rgb(240, 100, 6);
+  border: 1px solid rgb(240, 100, 6);
+  padding: 2.5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+#footer-sidebar.active #footer-toggle-btn:hover {
+  background-color: rgb(240, 100, 6);
+  color: white;
+}
+#footer-sidebar.active #footer-buttons {
+  display: block; /* Show the footer buttons when the sidebar is active */
+}
+
+/* Character cards styles */
+.character-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  max-width: 1000px; /* Set a max-width to prevent horizontal overflow */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+.card-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.character-card {
+  width: 150px;
+  height: 200px;
+  background-color: #3b3a3a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+.character-card:hover {
+  transform: translateY(-5px);
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #3b3a3a; /* Change to match your website theme */
+  color: white; /* Text color */
+  font-family: 'Playfair Display', serif; /* Font family */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding inside the popup */
+}
+
+.leaflet-popup-tip-container {
+  display: none; /* Hide the default leaflet popup tip */
+}
+.popup-button{
+  margin-right: 6px;
+  margin-bottom: 10px;
+  background-color: rgb(44, 43, 43);
+  color: rgb(240, 100, 6);
+  border: 1px solid rgb(240, 100, 6);
+  padding: 1px 3px;
+  border-radius: 30%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.popup-button:hover{
+  background-color: rgb(240, 100, 6);
+  color: white;
+}
+.popup-close-button{
+  float: right;
+  font-size: 20px;
+  background: #efefef;
+  border: 0;
+  outline: 0;
+  padding: 4px 10px;
+  border-radius: 50%;
+}
+.popup-close-button:hover{
+  background-color: rgb(240, 100, 6);
+  color: white;
+}
+
+.popup-content{
+  margin-bottom: 10px;
+}
+/* Scrollbar styles */
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(240, 100, 6) transparent; /* scrollbar-color: thumbColor trackColor; */
+}
+
+/* For Chrome, Safari, and Opera */
+*::-webkit-scrollbar {
+  width: 8px; /* Width of vertical scrollbar */
+  height: 8px; /* Height of horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(240, 100, 6, 0.5); /* Color of the thumb */
+  border-radius: 4px; /* Roundness of the thumb */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent; /* Color of the track */
+}
+
+/* Custom styles for leaflet-interactive class */
+.leaflet-interactive {
+  stroke: blue; /* Change stroke color */
+  stroke-width: 3px; /* Increase stroke width to make it bigger */
+  fill: blue; /* Change fill color */
+  fill-opacity: 0.5; /* Reduce fill opacity */
+  transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.leaflet-interactive:hover {
+  stroke-width: 10px;
+  stroke: orange; /* Change stroke color on hover */
+  fill: orange; /* Change fill color on hover */
+  fill-opacity: 1; /* Increase fill opacity on hover */
+}
+

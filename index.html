@@ -4,55 +4,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="./src/js/characterHandler.js"></script>
   <title>Legends Of Ramayana</title>
 </head>
 
 <body>
-  <div id="navbar">
+  <div id="navbar" class="opaque-saffron">
     <div id="logo">
-      <button id="sidebar-toggle">☰</button>
-      <a href="/">Legends Of Ramayana</a>
+      <a></a>
+      <button id="sidebar-toggle" style="
+            background-color: transparent;
+            border: none;
+            color: rgb(240, 100, 6);
+          ">
+        ☰
+      </button>
+      <img src="media/img/—Pngtree—shri ram vector design image_6825898.png" alt="Legends Of Ramayana Logo"
+        id="logo-img" />
+      <a href="/" class="nav-link">Legends Of Ramayana</a>
     </div>
     <div id="menu">
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Important Learnings</a></li>
-        <li><a href="#">Guide</a></li>
+        <li><a href="#" class="nav-link">Overview</a></li>
+        <li><a href="#" class="nav-link">Important Learnings</a></li>
+        <li><a href="#" class="nav-link">Guide</a></li>
       </ul>
     </div>
   </div>
-  <div id="sidebar">
+  <div id="sidebar" class="translucent-saffron">
     <!-- Modal Buttons -->
     <ul>
-      <li><button class="modal-open" data-modal="modal1">Complete Ramayana</button></li>
-      <li><button class="modal-open" data-modal="modal2">Summary</button></li>
-      <li><button class="modal-open" data-modal="modal3">Origins of Lord Rama</button></li>
-      <li><button class="modal-open" data-modal="modal4">Origins of Ravana</button></li>
-      <li><button class="modal-open" data-modal="modal5">Other Characters</button></li>
+      <br /><br /><br /><br />
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal1">
+          Complete Ramayana
+        </button>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal2">
+          Summary
+        </button>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal3">
+          Origins of Lord Rama
+        </button>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal4">
+          Origins of Ravana
+        </button>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal5">
+          Other Characters
+        </button>
+      </li>
     </ul>
     <div class="modal" id="modal1">
       <div class="modal-content">
         <div class="modal-header">
           Complete Ramayana
+          <button class="modal-close">&times;</button>
         </div>
-        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+            voluptatem architecto magni doloribus placeat dolorum expedita
+            iste eos ipsa, ullam natus ipsam, doloremque accusantium quam
+            maiores praesentium exercitationem molestias mollitia error modi
+            ab aperiam aliquid. Quo, provident odit? Consequatur sit minima
+            recusandae enim optio. Commodi, illo deserunt sit eligendi itaque
+            accusamus officia ullam. Molestiae maxime consectetur unde
+            provident voluptatibus expedita alias cumque eaque. Suscipit autem
+            facilis placeat recusandae adipisci nihil reprehenderit ipsam
+            asperiores explicabo dolores ex et omnis exercitationem maiores,
+            itaque perspiciatis quos rem sapiente accusantium praesentium
+            aspernatur tempora! Voluptate maiores autem, mollitia cum possimus
+            quo perferendis harum dolorem saepe id officiis magnam fuga
+            debitis aspernatur magni nemo aperiam fugit quia voluptates
+            molestias! A porro rerum in qui odio harum repudiandae vitae
+            numquam. Minima consequatur pariatur odit esse exercitationem,
+            rerum earum repudiandae provident natus quam eius quibusdam
+            dignissimos eum asperiores doloremque incidunt maiores inventore
+            deserunt nihil quas est perspiciatis nostrum optio. Neque sit,
+            perferendis similique quaerat fugiat soluta sapiente non velit
+            quos fugit vitae accusamus rem ipsam in nulla itaque sequi error.
+            Excepturi ut quidem laboriosam quod numquam dolores voluptas,
+            aperiam voluptate voluptatem consectetur tempore omnis architecto
+            recusandae, ratione qui minus eos sit. Porro voluptas tempora ex
+            impedit ut consectetur aliquam, quas atque in eum, harum deserunt
+            voluptatum laboriosam nulla omnis libero, repudiandae vel? Sint
+            perspiciatis sapiente praesentium delectus culpa, dolorum esse
+            aut! Aliquid maxime velit quidem necessitatibus architecto
+            voluptates magnam quia consectetur commodi eius ipsam odit, saepe,
+            obcaecati, blanditiis dolor facilis dignissimos. Asperiores
+            ratione cum similique pariatur corrupti labore odio debitis,
+            quisquam vero quos delectus dignissimos tenetur commodi eos
+            aliquid soluta dicta porro fuga omnis ex fugit? Quis atque, optio
+            deserunt quas eaque maxime earum voluptatum? Delectus, impedit, ab
+            aliquam quis deleniti doloremque mollitia nisi rerum aperiam
+            accusamus illum animi accusantium pariatur nesciunt est non dicta
+            vel earum alias temporibus laborum. Quibusdam eligendi aliquam
+            facilis ea hic dolor nihil commodi distinctio nam sequi maiores
+            autem, rem, est consequatur eaque in deserunt? Eveniet, dicta.
+            Expedita reprehenderit hic assumenda ipsam! Accusamus autem vitae
+            quia assumenda! Dolorem quidem amet dolor ipsa illum perspiciatis
+            sint doloribus laboriosam deserunt quos perferendis, esse dolores
+            aliquid labore, obcaecati architecto itaque excepturi voluptatem
+            impedit voluptate quas officiis nisi a. Quaerat veritatis quidem
+            unde in ratione ad voluptatum tempora dicta illum aut repudiandae,
+            fugiat itaque explicabo sunt nostrum non neque eligendi soluta
+            mollitia fugit, delectus odit. Cumque voluptatibus, ducimus modi
+            cupiditate, accusamus iure enim porro dolores magni quos earum
+            placeat distinctio, a esse delectus repellendus cum neque
+            dignissimos perspiciatis eum harum. Impedit cumque, quasi
+            blanditiis earum quae vitae adipisci nisi accusantium architecto
+            ea esse maiores ipsum ex minima consectetur nihil numquam quos,
+            alias corrupti nostrum debitis quam! Cupiditate labore aspernatur
+            voluptates inventore nesciunt consequuntur quidem aut sit dolor!
+            Architecto earum laboriosam ipsa eum, necessitatibus eligendi
+            minus iusto fugit veniam blanditiis quidem laudantium debitis
+            delectus adipisci quisquam facere quos saepe est, sunt hic.
+            Accusamus totam sunt perspiciatis? Perferendis, rem reiciendis
+            blanditiis consequuntur cumque hic est! Quidem, suscipit debitis,
+            vero voluptatum blanditiis animi deserunt amet quam qui
+            perferendis pariatur! Laudantium!
+            <!-- Original Modal Content -->
+          </div>
+          <div class="modal-content-right">
+            <!-- Image Content -->
+          </div>
         </div>
         <div class="modal-footer">
-          <button class="link modal-close">Close Modal</button>
+          <button class="modal-close">Close Modal</button>
         </div>
       </div>
     </div>
@@ -60,14 +149,18 @@
       <div class="modal-content">
         <div class="modal-header">
           Summary
+          <button class="modal-close">&times;</button>
         </div>
-        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left">
+            <!-- Original Modal Content -->
+          </div>
+          <div class="modal-content-right">
+            <!-- Image Content -->
+          </div>
         </div>
         <div class="modal-footer">
-          <button class="link modal-close">Close Modal</button>
+          <button class="modal-close">Close Modal</button>
         </div>
       </div>
     </div>
@@ -75,14 +168,18 @@
       <div class="modal-content">
         <div class="modal-header">
           Origins of Lord Rama
+          <button class="modal-close">&times;</button>
         </div>
-        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left">
+            <!-- Original Modal Content -->
+          </div>
+          <div class="modal-content-right">
+            <!-- Image Content -->
+          </div>
         </div>
         <div class="modal-footer">
-          <button class="link modal-close">Close Modal</button>
+          <button class="modal-close">Close Modal</button>
         </div>
       </div>
     </div>
@@ -90,14 +187,16 @@
       <div class="modal-content">
         <div class="modal-header">
           Origins of Ravana
+          <button class="modal-close">&times;</button>
         </div>
-        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left"></div>
+          <div class="modal-content-right">
+            <!-- Image Content -->
+          </div>
         </div>
         <div class="modal-footer">
-          <button class="link modal-close">Close Modal</button>
+          <button class="modal-close">Close Modal</button>
         </div>
       </div>
     </div>
@@ -105,24 +204,141 @@
       <div class="modal-content">
         <div class="modal-header">
           Other Characters
+          <button class="modal-close">&times;</button>
         </div>
-        <div class="modal-body" style="max-height: 300px; overflow-y: scroll;">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aut nihil dolor tempora quod illo, similique, quia impedit blanditiis ratione dicta sit est eos vero tenetur nostrum magnam, amet alias!</p>
-        </div>
+        <div class="character-cards"></div>
         <div class="modal-footer">
-          <button class="link modal-close">Close Modal</button>
+          <button class="modal-close">Close Modal</button>
         </div>
       </div>
     </div>
   </div>
+  <footer>
+    <div id="footer-sidebar">
+      <button id="footer-toggle-btn">Kandas</button>
+      <br /><br />
+      <div id="footer-buttons">
+        <button class="footer-button" id="bala-button">Bala</button>
+        <button class="footer-button" id="ayodhya-button">Ayodhya</button>
+        <button class="footer-button" id="aranya-button">Aranya</button>
+        <button class="footer-button" id="kiskindha-button">Kishkindha</button>
+        <button class="footer-button" id="sundara-button">Sundara</button>
+        <button class="footer-button" id="yuddha-button">Yuddha</button>
+        <button class="footer-button" id="uttara-button">Uttara</button>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Modals -->
-  <div id="map" style="height: 100vh;"></div>
+  <script>
+    document.getElementById("bala-button").addEventListener("click", function () {
+      // Remove previously appended script element
+      const existingScript = document.querySelector('script[src="./src/js/kandas/bala.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      // Load JavaScript file for Bala with a random query parameter
+      var script = document.createElement('script');
+      script.src = './src/js/kandas/bala.js' + '?rand=' + Math.random();
+      script.type = 'module';
+      document.body.appendChild(script);
+    });
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    document.getElementById("ayodhya-button").addEventListener("click", function () {
+      // Remove previously appended script element
+      const existingScript = document.querySelector('script[src="./src/js/kandas/ayodhya.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      // Load JavaScript file for Bala with a random query parameter
+      var script = document.createElement('script');
+      script.src = './src/js/kandas/ayodhya.js' + '?rand=' + Math.random();
+      script.type = 'module';
+      document.body.appendChild(script);
+    });
+
+    document.getElementById("aranya-button").addEventListener("click", function () {
+      // Remove previously appended script element
+      const existingScript = document.querySelector('script[src="./src/js/kandas/aranya.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      // Load JavaScript file for Bala with a random query parameter
+      var script = document.createElement('script');
+      script.src = './src/js/kandas/aranya.js' + '?rand=' + Math.random();
+      script.type = 'module';
+      document.body.appendChild(script);
+    });
+
+
+    document.getElementById("kiskindha-button").addEventListener("click", function () {
+      // Remove previously appended script element
+      const existingScript = document.querySelector('script[src="./src/js/kandas/kiskindha.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      // Load JavaScript file for Bala with a random query parameter
+      var script = document.createElement('script');
+      script.src = './src/js/kandas/kiskindha.js' + '?rand=' + Math.random();
+      script.type = 'module';
+      document.body.appendChild(script);
+    });
+
+    document.getElementById("sundara-button").addEventListener("click", function () {
+      // Remove previously appended script element
+      const existingScript = document.querySelector('script[src="./src/js/kandas/sundara.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      // Load JavaScript file for Bala with a random query parameter
+      var script = document.createElement('script');
+      script.src = './src/js/kandas/sundara.js' + '?rand=' + Math.random();
+      script.type = 'module';
+      document.body.appendChild(script);
+    });
+
+
+    document.getElementById("yuddha-button").addEventListener("click", function () {
+      // Remove previously appended script element
+      const existingScript = document.querySelector('script[src="./src/js/kandas/yuddha.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      // Load JavaScript file for Bala with a random query parameter
+      var script = document.createElement('script');
+      script.src = './src/js/kandas/yuddha.js' + '?rand=' + Math.random();
+      script.type = 'module';
+      document.body.appendChild(script);
+    });
+
+    document.getElementById("uttara-button").addEventListener("click", function () {
+      // Remove previously appended script element
+      const existingScript = document.querySelector('script[src="./src/js/kandas/uttara.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      // Load JavaScript file for Bala with a random query parameter
+      var script = document.createElement('script');
+      script.src = './src/js/kandas/uttara.js' + '?rand=' + Math.random();
+      script.type = 'module';
+      document.body.appendChild(script);
+    });
+
+    // Repeat the above process for other buttons...
+  </script>
+
+  <div id="map" style="height: 85vh"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script type="module" src="./src/js/main.js"></script>
+  <script>
+    document
+      .getElementById("footer-toggle-btn")
+      .addEventListener("click", function () {
+        document.getElementById("footer-sidebar").classList.toggle("active");
+      });
+  </script>
 </body>
 
 </html>

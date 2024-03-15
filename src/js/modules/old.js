@@ -38,30 +38,26 @@ const createPopupContainerWithList = (idx, arrows, map, pointsData, locations_da
   const point = pointsData[idx]; // This is the point which is clicked
   const buttonsContainer = L.DomUtil.create("div", "popup-buttons-container");
   var nextButton = L.DomUtil.create("button", "popup-button");
-  // buttonsContainer.appendChild(nextButton);
-  nextButton = buttonCreator("Next", idx + 1, pointsData, arrows, map);
-  // var prevButton = prevButtonCreator( point.list_content[subindex - 1], pointsData, arrows, map);
+  nextButton.textContent = "Next";
   buttonsContainer.appendChild(nextButton);
-  // buttonsContainer.appendChild(prevButton);
+
   list_incident_indexes = getIncidentPointIndexes(point, pointsData);
   point.list_content.forEach((item, i) => {
     const button = createPopupButton(i, () => {
       contentDiv.innerHTML = item.content;
       buttonsContainer.removeChild(nextButton);
-      // buttonsContainer.removeChild(prevButton);
       nextButton = buttonCreator("Next", item, pointsData, arrows, map);
-      // prevButton = prevButtonCreator(item, pointsData, arrows, map);
-      // buttonsContainer.appendChild(prevButton);
       buttonsContainer.appendChild(nextButton);
     });
     buttonsContainer.appendChild(button);
+    // Add space between buttons
+    buttonsContainer.appendChild(document.createElement("br"));
+        buttonsContainer.appendChild(document.createElement("br"));
+
   });
+
   const contentDiv = L.DomUtil.create("div", "popup-content", buttonsContainer);
   contentDiv.innerHTML = point.list_content[subindex - 1].content;
-  buttonsContainer.removeChild(nextButton);
-  // buttonsContainer.removeChild(prevButton);
-  // buttonsContainer.appendChild(prevButton);
-  buttonsContainer.appendChild(nextButton);
 
   return buttonsContainer;
 };

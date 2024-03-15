@@ -1,0 +1,103 @@
+[
+    {
+      "name": "Character 1",
+      "image": "../images/character1.jpg",
+      "about": "Description of Character 1."
+    },
+    {
+      "name": "Character 2",
+      "image": "character2.jpg",
+      "about": "Description of Character 2."
+    },
+    {
+      "name": "Character 3",
+      "image": "character3.jpg",
+      "about": "Description of Character 3."
+    },
+    {
+      "name": "Character 4",
+      "image": "character4.jpg",
+      "about": "Description of Character 4."
+    },
+    {
+      "name": "Character 5",
+      "image": "character5.jpg",
+      "about": "Description of Character 5."
+    },
+    {
+      "name": "Character 6",
+      "image": "character6.jpg",
+      "about": "Description of Character 6."
+    },
+    {
+      "name": "Character 7",
+      "image": "character7.jpg",
+      "about": "Description of Character 7."
+    },
+    {
+      "name": "Character 8",
+      "image": "character8.jpg",
+      "about": "Description of Character 8."
+    },
+    {
+      "name": "Character 9",
+      "image": "character9.jpg",
+      "about": "Description of Character 9."
+    },
+    {
+      "name": "Character 10",
+      "image": "character10.jpg",
+      "about": "Description of Character 10."
+    },
+    {
+      "name": "Character 11",
+      "image": "character11.jpg",
+      "about": "Description of Character 11."
+    },
+    {
+      "name": "Character 12",
+      "image": "character12.jpg",
+      "about": "Description of Character 12."
+    },
+    {
+      "name": "Character 13",
+      "image": "character13.jpg",
+      "about": "Description of Character 13."
+    },
+    {
+      "name": "Character 14",
+      "image": "character14.jpg",
+      "about": "Description of Character 14."
+    },
+    {
+      "name": "Character 15",
+      "image": "character15.jpg",
+      "about": "Description of Character 15."
+    },
+    {
+      "name": "Character 16",
+      "image": "character16.jpg",
+      "about": "Description of Character 16."
+    },
+    {
+      "name": "Character 17",
+      "image": "character17.jpg",
+      "about": "Description of Character 17."
+    },
+    {
+      "name": "Character 18",
+      "image": "character18.jpg",
+      "about": "Description of Character 18."
+    },
+    {
+      "name": "Character 19",
+      "image": "character19.jpg",
+      "about": "Description of Character 19."
+    },
+    {
+      "name": "Character 20",
+      "image": "character20.jpg",
+      "about": "Description of Character 20."
+    }
+  ]
+  
