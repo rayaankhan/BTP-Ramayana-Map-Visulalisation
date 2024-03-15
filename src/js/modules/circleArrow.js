@@ -20,6 +20,7 @@ export const createCirclesAndArrowsWithList = (
     if (fl == 0) {
       location_repeater.push(point.location);
       const circle = createResponsiveCircle(map, point, locations_data, () => {
+        // console.log("dot is clicked");
         toggleArrows(i, arrows);
         openPopupWithList(i, arrows, map, pointsData, locations_data);
         location_repeater.push(point.location);
