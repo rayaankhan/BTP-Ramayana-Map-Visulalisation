@@ -38,6 +38,20 @@ export const initializeMap = () => {
   return mapInstance;
 };
 
+export const zoomSetter = (arrows, idx, map) => {
+  const options = {
+    paddingTopLeft: [150, 150], // Add padding to the top left corner (in pixels)
+    paddingBottomRight: [100, 100], // Add padding to the bottom right corner (in pixels)
+  };
+  
+  const arrowCoordinates = arrows[idx].getLatLngs();
+  if(arrowCoordinates[0].lat == arrowCoordinates[1].lat && arrowCoordinates[0].lng == arrowCoordinates[1].lng) {
+    map.setView(arrowCoordinates[0], 7, options);
+  }
+  else{
+    map.flyToBounds(arrowCoordinates, options);
+  }
+};
 
 
 

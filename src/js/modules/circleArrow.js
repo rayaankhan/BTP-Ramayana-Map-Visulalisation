@@ -1,12 +1,15 @@
 import { openPopupWithList } from "./popup.js";
+import { zoomSetter } from "./map.js";
 
 // Circle and arrow creation module with list content
 export const createCirclesAndArrowsWithList = (
   map,
   pointsData,
-  locations_data
+  locations_data,
+  marker_color
 ) => {
   const arrows = [];
+  const circles = [];
   const location_repeater = [];
 
   for (let i = 0; i < pointsData.length; i++) {
@@ -19,11 +22,13 @@ export const createCirclesAndArrowsWithList = (
     });
     if (fl == 0) {
       location_repeater.push(point.location);
-      const circle = createResponsiveCircle(map, point, locations_data, () => {
-        // console.log("dot is clicked");
+      createResponsiveCircle(map, point, locations_data, marker_color, () => {
         toggleArrows(i, arrows);
         openPopupWithList(i, arrows, map, pointsData, locations_data);
+        zoomSetter(arrows, i, map);
         location_repeater.push(point.location);
+      }).then((circle) => {
+        circles.push(circle);
       });
     }
 
@@ -33,39 +38,47 @@ export const createCirclesAndArrowsWithList = (
     }
   }
 
-  return arrows;
+  return [arrows, circles];
 };
 
 // Create circle with list content
-const createCircle = (point, map, locations_data) => {
+const createCircle = (point, map, locations_data, marker_color) => {
   let location_name = point.location;
 
   // Return a Promise that resolves with the circle object
   let location_coordinates = locations_data[location_name];
   let latitude = location_coordinates[0];
   let longitude = location_coordinates[1];
-  return new Promise((resolve, reject) => {
-    const circle = L.circle([latitude, longitude], {
-      color: "red",
-      fillColor: "red",
-      fillOpacity: 1,
-      radius: 1500,
+  let circle = 0;
+
+  // Define a custom icon with orange color
+  // console.log("color is: ", marker_color);
+  const icon_location = `../../../images/marker/${marker_color}.png`;
+  const coloredIcon = L.icon({
+    iconUrl: icon_location, // URL to the marker icon image
+    iconSize: [25, 41], // Size of the icon (width, height) in pixels
+    iconAnchor: [12, 41], // The coordinates of the "tip" of the icon (relative to its top left corner)
+    popupAnchor: [1, -34], // The coordinates of the point from which popups will "open", relative to the icon anchor
+  });
+  const promise = new Promise((resolve, reject) => {
+    circle = L.marker([latitude, longitude], {
+      icon: coloredIcon // Use the custom icon
     }).addTo(map);
     resolve(circle);
   });
+  return promise;
 };
 
-const createResponsiveCircle = (map, point, locations_data, onClick) => {
+const createResponsiveCircle = async (map, point, locations_data, marker_color, onClick) => {
   // Call createCircle function and handle the resolved circle object
-  createCircle(point, map, locations_data)
-    .then((circle) => {
-      circle.on("click", onClick);
-      return circle;
-    })
-    .catch((error) => {
-      console.error("Error creating circle:", error);
-      return -1;
-    });
+  try {
+    const circle = await createCircle(point, map, locations_data, marker_color);
+    circle.on("click", onClick);
+    return circle;
+  } catch (error) {
+    console.error("Error creating circle:", error);
+    return -1;
+  }
 };
 
 const setAllOtherToOpaque = (arrows) => {

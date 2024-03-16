@@ -1,5 +1,256 @@
 {
     "points": [
-        { "no": 1, "location": "madhyapradesh", "topic": "Me", "content": "MP" }
+        {
+            "no": 1,
+            "location": "dandakaforest",
+            "topic": "Arrival of Rama,Sita and Laskshmana",
+            "content": "they accompanied by sage vishwamitra who seeks rama's help in protecting his yajna (sacrificial ritual) from demons"
+        },
+        {
+            "no": 2,
+            "location": "dandakaforest",
+            "topic": "Encounter with Tataka",
+            "content": "rama encounters the demoness tataka in forest,  with vishwamitra's guidance, rama succesfully eliminates tataka, freeing the forest from her menace"
+        },
+        {
+            "no": 3,
+            "location": "dandakaforest",
+            "topic": "Arrival at the Hermitage of Sage Sutikshna",
+            "content": "rama, sita and lakshmana reach the hermitage of sage sutikshna"
+        },
+        {
+            "no": 4,
+            "location": "dandakaforest",
+            "topic": "Sage Shabala's story",
+            "content": "sage shabala narrates her story and seeks ravana's help,  rama promises to protect and hermitage her"
+        },
+        {
+            "no": 5,
+            "location": "dandakaforest",
+            "topic": "Encounter with Viradha",
+            "content": "the trio encounters the demon viradha, rama defeats viradha who was once a celestial being cursed to live as demon"
+        },
+        {
+            "no": 6,
+            "location": "panchavati",
+            "topic": "Arrival at Panchavati",
+            "content": "rama,sita and lakshmana settle in picturesque panchavati,  build a simple hermitage"
+        },
+        {
+            "no": 7,
+            "location": "panchavati",
+            "topic": "Surpanakhas Encounter",
+            "content": "surpanakha encounters rama and is attracted to him, she expresses her desire for rama leading to the disfigurement of here nose and ears by lakshmana"
+        },
+        {
+            "no": 8,
+            "location": "kharaterritory",
+            "topic": "Khara and Dushana's Attack",
+            "content": "khara and dushana demon siblings and relatives of surpanakha attacks rama's hermitage,  rama defeats them in battle"
+        },
+        {
+            "no": 9,
+            "location": "dandakaforest",
+            "topic": "Surpanakhas Revenge",
+            "content": "surpanakha seeks revenge and approaches ravana, describing the beauty of sita and instigating him to abduct her"
+        },
+        {
+            "no": 10,
+            "location": "janasthana",
+            "topic": "Janasthana",
+            "content": "rama defeats khara and his demon army in the vicinity of janasthana"
+        },
+        {
+            "no": 11,
+            "location": "panchavati",
+            "topic": "Abduction of Sita",
+            "content": "ravana the demon king, disguied as a mendicant, abducts sita in the absence of rama and lakshmana"
+        },
+        {
+            "no": 12,
+            "location": "lepakshi",
+            "topic": "Jatayu's heroic effort",
+            "content": "the vulture witness sita's abduction and valiantly tries to rescue her but is defeated by ravana"
+        },
+        {
+            "no": 13,
+            "location": "pampariver",
+            "topic": "Rama's Search for Sita",
+            "content": "rama and lakshmana upon their return discover sita's abduction,  they began their search for sita crossing the pampa river"
+        },
+        {
+            "no": 14,
+            "location": "rishyamukhaparvat",
+            "topic": "Encounter wiht Shabari",
+            "content": "rama and lakshmana meet shabari an elderly ascetic woman who offers them hospitality"
+        },
+        {
+            "no": 15,
+            "location": "kishkinda",
+            "topic": "Hanuman's Introduction",
+            "content": "hanuman the mighty monkey warrior and devotee of lord rama is introduced in aryanakanda"
+        },
+        {
+            "no": 16,
+            "location": "kishkindha",
+            "topic": "Search for Sita",
+            "content": "rama and lakshmana continue their search for sita, reaching the region of kishkindha"
+        },
+        {
+            "no": 17,
+            "location": "kishkindha",
+            "topic": "Introduction of Sugriva and Vali",
+            "content": "sugriva is introduced as the excited monkey king, and vali his elder brother current ruler of kishkindha"
+        },
+        {
+            "no": 18,
+            "location": "matanga",
+            "topic": "Cave of Matanga",
+            "content": "matanga's hermitage is a cave where sugriva initially hides from vali, sugriva later establishes his bases in their cave after forming an alliance with rama"
+        },
+        {
+            "no": 19,
+            "location": "kishkindha",
+            "topic": "Sugriva's Alliance with Rama",
+            "content": "sugriva promises to help rama find sita in return for ravana's assistance in reclaming the throne from vali"
+        },
+        {
+            "no": 20,
+            "location": "panchavati",
+            "topic": "Vali's Defeat by Rama",
+            "content": "rama challenges vali to a duel, with vali's son angada's help rama defeats nali and sugriva becomes the king of kishkindha"
+        },
+        {
+            "no": 21,
+            "location": "rishyamukhaparvat",
+            "topic": "Hanumans Introduction",
+            "content": "hanuman is a devoted follower of sugriva, is introduced, key figure to search for sita"
+        },
+        {
+            "no": 22,
+            "location": "sri lanka",
+            "topic": "Hanuman's Leap to Lanka",
+            "content": "hanuman crosses the ocean in a giant leap reaching lanka in search of sita, he finds sita in ashoka vatika(garden of vatika)"
+        },
+        {
+            "no": 23,
+            "location": "ashoka vatika",
+            "topic": "Sita's Search",
+            "content": "ashoka vatika is a garden in lanka where sita is held captive by ravana, hanuman meets sita and reassure her"
+        },
+        {
+            "no": 24,
+            "location": "sri lanka",
+            "topic": "Burning of Lanka' Tail",
+            "content": "hanuman's sets fire to lanka using his burning tail after exploring the city, he returns to rama with information about the sita's whereabouts"
+        },
+        {
+            "no": 25,
+            "location": "ramsetu",
+            "topic": "building the ramasetu(adam's bridge)",
+            "content": "rama decides to build a bridge to lanka, the army of monkeys and bears construct the rama setu. a bridge of stones to cross the ocean"
+        },
+        {
+            "no": 26,
+            "location": "ramsetu",
+            "topic": "alliance with vanara and bear armies",
+            "content": "various monkey and bear commanders including sugriva,hanuman,angada,jambavan,nala and neela gather for the expedition to lanka"
+        },
+        {
+            "no": 27,
+            "location": "sri lanka",
+            "topic": "Reaching Lanka",
+            "content": "rama's army led by the monkey and bear forces reaches lanka through rama setu"
+        },
+        {
+            "no": 28,
+            "location": "sri lanka",
+            "topic": "Siege of Lanka",
+            "content": "the siege of lanka begins with intense battle between rama's forces and ravana's army"
+        },
+        {
+            "no": 29,
+            "location": "sri lanka",
+            "topic": "Siege dwxssxsdcxof Lanka",
+            "content": "the siege of lanka begins with intense battle between rama's forces and ravana's army"
+        },
+        {
+            "no": 30,
+            "location": "kishkinda",
+            "topic": "Hanumān meets Jambavan, Sugrīva",
+            "content": "Hanumān meets Jambavan, Sugrīva, and other monkeys in Kishkindha. They discuss Rāma's plight, and Jambavan reminds Hanumān of his abilities. Hanumān realizes his potential and decides to search for Sīta. Maruti (another name of Hanuman ji)'s two fellow monkeys Jambavan and Sugriya. Jambavan motivated Hanuman realising his strength. Han. bowed down to Surya Deva, Indra Deva(King of gods), Vayu deva (wind and hanu. father) and 5 elements (water, air, fire, earth, space). Hanu tried to lift the mountain."
+        },
+        {
+            "no": 31,
+            "location": "mahendramountaion",
+            "topic": "Hanuman's Leap of Faith: Embarking on the Search for Sita",
+            "content": "On the summit of Mahendra Mountain, Hanuman, the mighty monkey warrior, braced himself for an extraordinary feat: leaping across the vast ocean to reach Lanka and find Sita. With unwavering determination, he sought the blessings of the gods, their divine favor empowering him for the arduous journey ahead. As Hanuman surveyed the boundless expanse of water, his strength surged within him. He paced the mountainside, his powerful strides shaking the very ground. With a thunderous roar, he enlarged his body to an immense size, his presence commanding awe and reverence. With a mighty kick, Hanuman launched himself into the air, soaring through the sky like a celestial bird. The birds of the mountain, inspired by his valor, accompanied him in a grand procession, their wings beating in unison. As Hanuman disappeared into the distance, the leaves and flowers that adorned his body fluttered down into the ocean, creating a breathtaking spectacle."
+        },
+        {
+            "no": 32,
+            "location": "indianocean",
+            "topic": "Hanuman's Encounter with Mainaka Mountain in the Ramayana.",
+            "content": "Mainaka(door for the demons of the underwater world. Maināka had the power to grow bigger in any direction.): King Daśaratha, wanting to aid Hanumān, asked the sea king Sāgara to assist the mission. Sāgara suggested Hanumān rest on the Maināka Mountain, known for its ability to grow in any direction. Approaching Maināka, Hanumān pushed it, prompting the mountain to take human form and offer hospitality. Maināka, indebted to Hanumān's father Vāyu deva, urged him to rest, citing their special bond and King Sāgara's obligation to the Ikșvāku dynasty. Hanumān, committed to his mission, thanked Maināka but declined the offer, citing his promise to emulate Śri Rāma's arrow without stopping until reaching Lańkā. Maināka blessed Hanumān, who continued his journey without pause. The gods praised Hanumān's determination, and Maināka, blessed by the gods, remained standing on the sea forever as Hanumān disappeared in a moment, Hanuman encountered Surasa, a formidable obstacle on his path, but with his wit and humility, he convinced her to let him pass. He then faced Simhika, a shape-shifting demon, and swiftly defeated her by extracting her heart. As a result of his courageous feats, Hanuman received blessings from celestial beings, ensuring his continued success on his mission to find Sita."
+        },
+        {
+            "no": 33,
+            "location": "100yojanas",
+            "topic": "Hanuman's Discovery of Lanka from Lamba Mountain",
+            "content": "Hanumān, after defeating Simhika, resumed his flight. He spotted land within a hundred yojanas and carefully surveyed the shores, finding a spot with diverse trees. Observing the island from above, he decided to shrink to a smaller size, resembling the radiant form of Mahāvișņu in his Vāmana incarnation. Upon climbing Lambā Mountain, Hanumān beheld the city of Lańkā on Trikuta Mountain, shining brilliantly like Amarāvathi in the heavens. "
+        },
+        {
+            "no": 34,
+            "location": "srilanka",
+            "topic": "Hanuman's Encounter with Lankhini at the Gates of Lanka",
+            "content": "At the gates of Lanka, Hanuman was confronted by Lankhini, the city's guardian demoness. After a brief fight, Hanuman defeated her, and she recognized him as the monkey prophesied to bring about Ravana's downfall. Lankhini granted him entry, and Hanuman stealthily entered Lanka, searching for Sita and gathering intelligence."
+        },
+        {
+            "no": 35,
+            "location": "trikutamountain",
+            "topic": "Hanuman's Arrival in Lanka and Reconnaissance of the City",
+            "content": "Hanumān took a respite after reaching Lańkā, admiring the beauty of Lambā island mountain and the city's surroundings. He marveled at the fragrant flowers, fruit trees, and lush gardens. Hanumān observed the ponds, graceful birds, sports arenas, and guarded city walls, knowing the demons were prepared for Rāma's potential attack due to Sīta's abduction."
+        },
+        {
+            "no": 36,
+            "location": "lambaparvat",
+            "topic": "Hanuman's Strategic Entry into Lanka",
+            "content": "Hanuman, impressed by Lanka's grandeur, contemplated the difficulty of conquering it. He strategized to enter the city undetected, waiting for nightfall to become invisible. Recognizing the importance of diplomacy, he planned to find Sita without provoking Ravana. At sunset, Hanuman shrank himself and leaped into the city, marveling at its beauty under the moonlight."
+        },
+        {
+            "no": 37,
+            "location": "sigriya",
+            "topic": "Hanuman's Search for Sita in Ravana's Palace",
+            "content": "Hanuman entered Ravana's heavily guarded palace and marveled at its opulence. He explored the air vehicle hangars, discovering the magnificent Pushpaka Vimana. Despite the palace's grandeur, Hanuman couldn't find Sita. He briefly mistook Mandodari for Sita but soon realized his error. Despair crept in, but Hanuman prayed for strength and continued his search, heading towards the Ashoka gardens."
+        },
+        {
+            "no": 38,
+            "location": "simsupatree",
+            "topic": "Hanuman Finds Sita under the Simsupa Tree",
+            "content": "Near the Simsupa tree, Hanuman found a sorrowful Sita guarded by demonesses. He consoled her by chanting Rama's story and presenting his ring. Sita, filled with hope, entrusted Hanuman with her Chudamani for Rama. Despite Hanuman's offer to take her, Sita insisted on Rama rescuing her with honor."
+        },
+        {
+            "no": 39,
+            "location": "ashokavatika",
+            "topic": "Hanuman's Encounter with Sita in the Ashoka Gardens",
+            "content": "In the idyllic Ashoka gardens, Hanuman discovered a forlorn Sita, guarded by fearsome demonesses. Witnessing her despair, his heart sank. Ravana arrived, attempting to woo her with promises of opulence, but Sita courageously rejected his advances, declaring her unwavering devotion to Rama. Enraged, Ravana threatened her and ordered the demonesses to break her will. However, Trijata, an elderly demoness, intervened, sharing a prophetic dream foretelling Rama's triumph and Ravana's demise. At this opportune moment, Hanuman revealed himself to Sita, offering solace and assurance of Rama's imminent arrival, presenting Rama's ring as proof. Sita, filled with renewed hope, entrusted Hanuman with her Chudamani as a token of love for Rama. Despite Hanuman's suggestion to take her with him, Sita refused, desiring a rescue that honored Rama's valor. To assess the demons' strength, Hanuman strategically destroyed the gardens, engaging in fierce battles and slaying several demon warriors. Finally, he bid farewell to Sita, reiterating Rama's promise of deliverance."
+        },
+        {
+            "no": 40,
+            "location": "madhuvan",
+            "topic": "The Monkeys' Drunken Revelry in Madhuvana",
+            "content": "Returning from Lanka, Hanuman and the monkeys stopped at Madhuvana, a garden known for its intoxicating honey wine. Overindulging in celebration, the monkeys became drunk and wreaked havoc, destroying plants and attacking guards. Sugriva, recognizing their revelry as a sign of Hanuman's success, sent for them and learned of Sita's whereabouts."
+        },
+        {
+            "no": 41,
+            "location": "kishkinda",
+            "topic": "Hanuman's Report and Sita's Message",
+            "content": "The monkeys celebrate Hanuman's return and success. Hanuman presents the Chudamani to Rama and recounts Sita's message."
+        },
+        {
+            "no": 42,
+            "location": "ayodya",
+            "topic": "Rama Returns and Becomes King",
+            "content": "Hanuman travels to Ayodhya and informs Bharata of Rama's victory and imminent return. Bharata prepares for Rama's arrival and the joyous coronation ceremony. Rama returns to Ayodhya and is crowned king, ushering in an era of peace and prosperity."
+        }
     ]
 }
