@@ -81,9 +81,9 @@ fetch(characters_path)
             characterCard.appendChild(image);
 
             // Create and append character name element
-            const name = document.createElement('p');
-            name.textContent = character.name;
-            characterCard.appendChild(name);
+            // const name = document.createElement('p');
+            // name.textContent = character.name;
+            // characterCard.appendChild(name);
 
             // Append the character card to the container
             characterCardsContainer.appendChild(characterCard);
