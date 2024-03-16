@@ -42,8 +42,10 @@ export function updateModalContent(kandaName) {
   
           // Create and append image element
           const image = document.createElement("img");
-          image.src = matchingKanda.img; // Use the 'img' property from your JSON
+          console.log("matching kanda ", matchingKanda);
+          image.src = matchingKanda.image; // Use the 'img' property from your JSON
           image.alt = `Image for ${kandaName}`;
+          image.style.width = "100%";
           modalContentRight.appendChild(image);
         } else {
           console.error(`Kanda '${kandaName}' not found in the JSON data.`);

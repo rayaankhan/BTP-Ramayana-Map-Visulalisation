@@ -9,13 +9,8 @@ export const openPopupWithList = (
   pointsData,
   locations_data
 ) => {
-  // idx is the index of the point that is clicked
-  // arrows, map, pointsData, locations_data are the same as in the main function
-
   const point = pointsData[idx];
-  console.log(point);
   const location_name = point.location;
-  // console.log(locations_data);
   const location_coordinates = locations_data[location_name];
   const latitude = location_coordinates[0];
   const longitude = location_coordinates[1];
@@ -28,9 +23,7 @@ export const openPopupWithList = (
     locations_data
   );
 
-  const popup = L.popup({
-    maxHeight: 200, // Adjust the maxHeight value as needed
-  })
+  const popup = L.popup()
     .setLatLng([latitude, longitude])
     .setContent(container)
     .openOn(map);
@@ -56,8 +49,6 @@ const createPopupContainerWithList = (
   locations_data
 ) => {
   const point = pointsData[idx]; // This is the point which is clicked
-  // console.log(point.content);
-
   const buttonsContainer = L.DomUtil.create("div", "popup-buttons-container");
 
   const list_incident_indexes = getIncidentPointIndexes(point, pointsData);
@@ -73,18 +64,20 @@ const createPopupContainerWithList = (
     );
     buttonsContainer.appendChild(button);
   });
-  const contentDiv = L.DomUtil.create("div", "popup-content", buttonsContainer);
-  const content = point.topic;
-  const button = L.DomUtil.create("button", "popup-button");
-  button.innerHTML = point.topic;
-  button.addEventListener("click", () => {
-    // Call a function to open the modal with the content
-    openModalWithContent(point.content);
-  });
-  buttonsContainer.appendChild(button);
+
+  // Create heading element for no. topic
+  const heading = L.DomUtil.create("h3", "popup-heading");
+  heading.textContent = `${point.no}. ${point.topic}`;
+  buttonsContainer.appendChild(heading);
+
+  // Create content element
+  const contentDiv = L.DomUtil.create("div", "popup-content");
+  contentDiv.innerHTML = point.content;
+  buttonsContainer.appendChild(contentDiv);
+
+  // Add navigation buttons
   if (idx - 1 >= 0) {
-    var prevButton = L.DomUtil.create("button", "popup-button");
-    prevButton = buttonCreator(
+    const prevButton = buttonCreator(
       "Prev",
       idx - 1,
       pointsData,
@@ -92,11 +85,11 @@ const createPopupContainerWithList = (
       map,
       locations_data
     );
-    buttonsContainer.appendChild(prevButton); // buttonsContainer is my full popup box
+    buttonsContainer.appendChild(prevButton);
   }
+
   if (idx + 1 < pointsData.length) {
-    var nextButton = L.DomUtil.create("button", "popup-button");
-    nextButton = buttonCreator(
+    const nextButton = buttonCreator(
       "Next",
       idx + 1,
       pointsData,
@@ -104,8 +97,9 @@ const createPopupContainerWithList = (
       map,
       locations_data
     );
-    buttonsContainer.appendChild(nextButton); // buttonsContainer is my full popup box
+    buttonsContainer.appendChild(nextButton);
   }
+
   return buttonsContainer;
 };
 
@@ -117,14 +111,16 @@ const buttonCreator = (
   map,
   locations_data
 ) => {
-  const Button = createButtonWithOnclick(button_name, () => {
+  const Button = createPopupButton(button_name, () => {
     toggleArrows(idx, arrows);
     openPopupWithList(idx, arrows, map, pointsData, locations_data);
     zoomSetter(arrows, idx, map);
   });
   return Button;
 };
-const createButtonWithOnclick = (label, onClick) => {
+
+// Popup button creation module
+const createPopupButton = (label, onClick) => {
   const button = L.DomUtil.create("button", "popup-button");
   button.innerHTML = label;
   button.addEventListener("click", onClick);

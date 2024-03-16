@@ -76,7 +76,6 @@ const createResponsiveCircle = async (map, point, locations_data, marker_color, 
     circle.on("click", onClick);
     return circle;
   } catch (error) {
-    console.log(point.location);
     console.error("Error creating circle:", error);
     return -1;
   }
