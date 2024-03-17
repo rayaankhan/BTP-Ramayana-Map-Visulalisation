@@ -1,469 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script src="./src/js/characterHandler.js"></script>
-    <title>Legends Of Ramayana</title>
-  </head>
 
-  <body>
-    <div id="navbar" class="opaque-saffron">
-      <div id="logo">
-        <a></a>
-        <button
-          id="sidebar-toggle"
-          style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="./src/js/characterHandler.js"></script>
+  <title>Legends Of Ramayana</title>
+</head>
+
+<body>
+  <div id="navbar" class="opaque-saffron">
+    <div id="logo">
+      <a></a>
+      <button id="sidebar-toggle" style="
             background-color: transparent;
             border: none;
             color: rgb(240, 100, 6);
-          "
-        >
-          ☰
+          ">
+        ☰
+      </button>
+      <img src="media/img/ram_top_left.png" alt="Legends Of Ramayana Logo" id="logo-img" />
+      <a href="/" class="nav-link">The Chronicles of Sri Rama</a>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="#" class="nav-link">Overview</a></li>
+        <li><a href="#" class="nav-link">Important Learnings</a></li>
+        <li>
+          <button id="guide-dropdown-btn" class="nav-link">
+            Guide &#9660;
+          </button>
+          <ul id="guide-dropdown-content" class="dropdown-content"></ul>
+        </li>
+        <!-- <li><a href="#" class="nav-link">Guide</a></li> -->
+      </ul>
+    </div>
+  </div>
+  <div id="sidebar" class="translucent-saffron">
+    <!-- Modal Buttons -->
+    <ul>
+      <br /><br /><br /><br />
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal1">
+          Complete Ramayana
         </button>
-        <img
-          src="media/img/ram_top_left.png"
-          alt="Legends Of Ramayana Logo"
-          id="logo-img"
-        />
-        <a href="/" class="nav-link">The Chronicles of Sri Rama</a>
-      </div>
-      <div id="menu">
-        <ul>
-          <li><a href="#" class="nav-link">Overview</a></li>
-          <li><a href="#" class="nav-link">Important Learnings</a></li>
-          <li>
-            <button id="guide-dropdown-btn" class="nav-link">
-              Guide &#9660;
-            </button>
-            <ul id="guide-dropdown-content" class="dropdown-content"></ul>
-          </li>
-          <!-- <li><a href="#" class="nav-link">Guide</a></li> -->
-        </ul>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal2">
+          Summary
+        </button>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal3">
+          Origins of Lord Rama
+        </button>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal4">
+          Origins of Ravana
+        </button>
+      </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal5">
+          Other Characters
+        </button>
+      </li>
+    </ul>
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="kanda-heading"></h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left"></div>
+          <div class="modal-content-right">
+            <!-- Image Content -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div id="kanda-buttons"></div>
+          <!-- Container for kanda buttons -->
+          <button class="modal-close">Close Modal</button>
+        </div>
       </div>
     </div>
-    <div id="sidebar" class="translucent-saffron">
-      <!-- Modal Buttons -->
-      <ul>
-        <br /><br /><br /><br />
-        <li>
-          <button class="modal-open sidebar-button" data-modal="modal1">
-            Complete Ramayana
-          </button>
-        </li>
-        <li>
-          <button class="modal-open sidebar-button" data-modal="modal2">
-            Summary
-          </button>
-        </li>
-        <li>
-          <button class="modal-open sidebar-button" data-modal="modal3">
-            Origins of Lord Rama
-          </button>
-        </li>
-        <li>
-          <button class="modal-open sidebar-button" data-modal="modal4">
-            Origins of Ravana
-          </button>
-        </li>
-        <li>
-          <button class="modal-open sidebar-button" data-modal="modal5">
-            Other Characters
-          </button>
-        </li>
-      </ul>
-      <div class="modal" id="modal1">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 id="kanda-heading"></h2>
-            <button class="modal-close">&times;</button>
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <div class="modal-header">
+          Summary
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left">
+            The Ramayana, an ancient Indian epic, unfolds the divine saga of Lord Rama, his beloved wife Sita, and his
+            devoted ally Hanuman, amidst a cosmic battle between good and evil. The story begins with the birth of Rama,
+            the eldest prince of Ayodhya, and follows his journey from princely heir to exiled wanderer, to triumphant
+            hero and righteous king.
+
+            At the heart of the Ramayana is the abduction of Sita by the demon king Ravana, setting in motion a series
+            of events that test the characters' virtues and resolve. Rama, accompanied by his loyal brother Lakshmana
+            and the wise sage Vishwamitra, embarks on a quest to protect the sages and vanquish the demon horde
+            troubling the land. Along the way, he encounters and defeats powerful adversaries, including the demoness
+            Tataka and the demon king Maricha.
+
+            During their exile in the forest, Sita is tricked by Ravana disguised as a golden deer and is subsequently
+            abducted. Rama's anguish at the loss of his beloved drives him to form alliances with the Vanara (monkey)
+            king Sugriva and his devoted general Hanuman. With the help of Hanuman and his army of monkeys, Rama crosses
+            the vast ocean to Lanka, the stronghold of Ravana, to rescue Sita.
+
+            The climax of the epic unfolds in a dramatic battle between the forces of good and evil. Rama, aided by his
+            divine weapons and the unwavering support of his allies, confronts Ravana in a fierce duel. After a grueling
+            fight, Rama emerges victorious, slaying Ravana and liberating Sita from captivity. However, Sita's purity
+            and fidelity are questioned by the people of Ayodhya, leading Rama to reluctantly exile her to the forest.
+
+            Despite his love for Sita, Rama feels bound by his duty as a king to uphold societal norms. Sita seeks
+            refuge in the hermitage of the sage Valmiki, where she gives birth to Rama's twin sons, Lava and Kusha. The
+            brothers grow up in the forest, unaware of their royal lineage, until fate reunites them with their father
+            during a grand Ashwamedha (horse sacrifice) ceremony organized by Rama.
+
+            Ultimately, the Ramayana culminates in Rama's triumphant return to Ayodhya, where he is crowned as the
+            rightful king, and Sita is vindicated of all doubts through a trial by fire. The epic concludes with Rama's
+            reign ushering in an era of peace, prosperity, and righteousness, symbolizing the victory of dharma over
+            adharma and the triumph of virtue over vice. Through its timeless narrative, the Ramayana continues to
+            inspire millions, offering invaluable lessons in devotion, duty, sacrifice, and the eternal quest for truth
+            and righteousness.
           </div>
-          <div class="modal-body custom-popup">
-            <div class="modal-content-left"></div>
-            <div class="modal-content-right">
-              <!-- Image Content -->
-            </div>
-          </div>
-          <div class="modal-footer">
-            <div id="kanda-buttons"></div>
-            <!-- Container for kanda buttons -->
-            <button class="modal-close">Close Modal</button>
+          <div class="modal-content-right">
+            <img src="images/kanda/image.png">
           </div>
         </div>
-      </div>
-      <div class="modal" id="modal2">
-        <div class="modal-content">
-          <div class="modal-header">
-            Summary
-            <button class="modal-close">&times;</button>
-          </div>
-          <div class="modal-body custom-popup">
-            <div class="modal-content-left">
-              <!-- Original Modal Content -->
-            </div>
-            <div class="modal-content-right">
-              <!-- Image Content -->
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button class="modal-close">Close Modal</button>
-          </div>
+        <div class="modal-footer">
+          <button class="modal-close">Close Modal</button>
         </div>
       </div>
-      <div class="modal" id="modal3">
-        <div class="modal-content">
-          <div class="modal-header">
-            Origins of Lord Rama
-            <button class="modal-close">&times;</button>
-          </div>
-          <div class="modal-body custom-popup">
-            <div class="modal-content-left">
-              <div
-                style="
+    </div>
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <div class="modal-header">
+          Origins of Lord Rama
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left">
+            <div style="
                   font-family: Arial, sans-serif;
                   padding: 20px;
                   max-width: 800px;
                   margin: 0 auto;
-                "
-              >
-                <h1 style="font-size: 28px; color: white">
-                  Rama: The Hero of Ramayana
-                </h1>
-                <br />
-                <div style="margin-bottom: 30px">
-                  <h2 style="font-size: 24px; color: white">Rama's Family</h2>
-                  <p style="font-size: 16px; line-height: 1.6; color: white">
-                    Rama's father is King Dasaratha, a prince of the solar race,
-                    and his mother is Queen Kausalya. Rama was born at the end
-                    of the Second Age or Treta-yuga and he came into the world
-                    specifically at the bidding of the gods to deal with the
-                    fearsome multi-headed demon Ravana, the king of Lanka
-                    (modern Sri Lanka). The great god Vishnu answered the gods'
-                    call and appeared in a sacrificial fire made by Dasaratha.
-                    The pious king was presented with a pot of nectar, and he
-                    gave half of it to Kausalya who produced half-divine Rama as
-                    a consequence. Rama had three half-brothers – Bharata,
-                    Lakshmana, and Shatrughna - all with some, albeit lesser,
-                    divine qualities. Rama's favourite brother and great
-                    companion was Laksmana, son of Sumitra, while his loyal
-                    servant was the monkey warrior Hanuman (or Hanumat).
-                  </p>
-                </div>
-
-                <div style="margin-bottom: 30px">
-                  <h2 style="font-size: 24px; color: white">Rama Meets Sita</h2>
-                  <p style="font-size: 16px; line-height: 1.6; color: white">
-                    Rama's first adventure occurred when the sage Visvamitra
-                    asked for help in fighting a demon or raksasa. Rama and
-                    Laksmana, leaving their childhood home at Ayodhya capital of
-                    the northern kingdom of Koshala, followed Visvamitra to his
-                    home and there killed Taraka, a terrible female demon. In
-                    gratitude Rama was given divine weapons, and he set off for
-                    more adventures, ending up in Mithila. There Janaka the king
-                    of Videha hosted our hero, and he met the king's beautiful
-                    daughter Sita (also called Janaki or Maithili). The king had
-                    promised the princess in marriage to anyone who could manage
-                    to bend a huge bow which had once been the weapon of the
-                    great god Shiva. Rama, with his divine strength, did more
-                    than just bend the bow but broke it in half and so won the
-                    hand of Sita, his first and most revered wife.
-                  </p>
-                </div>
-
-                <div style="margin-bottom: 30px">
-                  <h2 style="font-size: 24px; color: white">Rama's Exile</h2>
-                  <p style="font-size: 16px; line-height: 1.6; color: white">
-                    Rama's succession to the throne of Ayodhya was made
-                    difficult by his mother's hunchback slave Manthara. Jealous
-                    of Rama, she soured the opinion of Kaikeyi, Dasaratha's
-                    second wife, and convinced her to persuade her husband to
-                    instead make Bharata heir to the throne. On top of this
-                    slight Rama was exiled from the kingdom for fourteen years.
-                    So, accompanied by Sita and his ever faithful companion
-                    Laksmana, Rama went to live in the far south in Citrakuta,
-                    deep in the Dandaka forest. Meanwhile, Dasaratha died, but
-                    Bharata, seeing the injustice of Rama's treatment, decided
-                    not to become king but instead to search for and return Rama
-                    to his rightful home and birthright. When the two brothers
-                    met once again, Rama obstinately refused to return to
-                    Ayodhya until he had fulfilled his father's wishes and
-                    served out his fourteen years of exile. After much
-                    discussion, Bharata agreed to act as regent until that time,
-                    and to prove to his subjects Rama's decision, he took his
-                    brother's shoes as a symbol of Rama's royal status.
-                  </p>
-                </div>
-
-                <div style="margin-bottom: 30px">
-                  <h2 style="font-size: 24px; color: white">
-                    Rama & Ravana Clash
-                  </h2>
-                  <p style="font-size: 16px; line-height: 1.6; color: white">
-                    Rama did not stay still in the remainder of his exile but
-                    visited many sages. Eventually, he ended up at Pancavati
-                    along the river Godavari, an area plagued by demons. One in
-                    particular, Surpanakha, the sister of Ravana, fell in love
-                    with Rama, and when her advances were resisted, she attacked
-                    Sita in revenge. Laksmana was the first to react and cut off
-                    the ears and nose of Surpanakha. Not best pleased with this
-                    treatment, the enraged demoness gathered an army of demons
-                    to attack the trio. In an epic battle Rama defeated them
-                    all; however, Surpanakha was not finished with the matter
-                    and she persuaded Ravana that Sita was a girl worth fighting
-                    for. Accordingly, the demon king sought out Rama's home, and
-                    while Rama was distracted in the hunt for a deer (who was
-                    actually Ravana's magician Maricha in disguise), abducted
-                    Sita, taking her back to Lanka in his aerial chariot to be
-                    kept captive in his beautiful Ashoka garden.
-                  </p>
-                </div>
-
-                <div style="margin-bottom: 30px">
-                  <h2 style="font-size: 24px; color: white">
-                    Worship & Representation in Art
-                  </h2>
-                  <p style="font-size: 16px; line-height: 1.6; color: white">
-                    Rama remains a figure of worship across India and South-east
-                    Asia but especially in Oude and Bihar. He has, for example,
-                    a magnificent temple at Ramesvaram, notable for its 17th
-                    century CE columned corridor. In addition, the Ramanandis
-                    are the largest and perhaps strictest Vaishnava monastic
-                    order. Rama is also considered by some Buddhists to be an
-                    avatar of Buddha, and sculptures of the hero sometimes
-                    appears on the exterior of Buddhist temples. In art Rama is
-                    always youthful and typically has green or blue skin, holds
-                    a bow and arrows, and wears a yellow robe. He is most often
-                    seen with Sita, Laksmana, and Hanuman – collectively known
-                    as Rama's family or Rama Parivara. Episodes from the
-                    Ramayana are especially popular in Hindu sculpture, wall
-                    paintings, and art in general, most of all forest scenes
-                    with Rama hunting the deer and the epic battle with Ravana.
-                  </p>
-                </div>
-
-                <!-- Other sections of the text go here -->
+                ">
+              <h1 style="font-size: 28px; color: white">
+                Rama: The Hero of Ramayana
+              </h1>
+              <br />
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">Rama's Family</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Rama's father is King Dasaratha, a prince of the solar race,
+                  and his mother is Queen Kausalya. Rama was born at the end
+                  of the Second Age or Treta-yuga and he came into the world
+                  specifically at the bidding of the gods to deal with the
+                  fearsome multi-headed demon Ravana, the king of Lanka
+                  (modern Sri Lanka). The great god Vishnu answered the gods'
+                  call and appeared in a sacrificial fire made by Dasaratha.
+                  The pious king was presented with a pot of nectar, and he
+                  gave half of it to Kausalya who produced half-divine Rama as
+                  a consequence. Rama had three half-brothers – Bharata,
+                  Lakshmana, and Shatrughna - all with some, albeit lesser,
+                  divine qualities. Rama's favourite brother and great
+                  companion was Laksmana, son of Sumitra, while his loyal
+                  servant was the monkey warrior Hanuman (or Hanumat).
+                </p>
               </div>
-            </div>
-            <div class="modal-content-right">
-              <img src="images/characters/Rama.jpeg">
+
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">Rama Meets Sita</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Rama's first adventure occurred when the sage Visvamitra
+                  asked for help in fighting a demon or raksasa. Rama and
+                  Laksmana, leaving their childhood home at Ayodhya capital of
+                  the northern kingdom of Koshala, followed Visvamitra to his
+                  home and there killed Taraka, a terrible female demon. In
+                  gratitude Rama was given divine weapons, and he set off for
+                  more adventures, ending up in Mithila. There Janaka the king
+                  of Videha hosted our hero, and he met the king's beautiful
+                  daughter Sita (also called Janaki or Maithili). The king had
+                  promised the princess in marriage to anyone who could manage
+                  to bend a huge bow which had once been the weapon of the
+                  great god Shiva. Rama, with his divine strength, did more
+                  than just bend the bow but broke it in half and so won the
+                  hand of Sita, his first and most revered wife.
+                </p>
+              </div>
+
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">Rama's Exile</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Rama's succession to the throne of Ayodhya was made
+                  difficult by his mother's hunchback slave Manthara. Jealous
+                  of Rama, she soured the opinion of Kaikeyi, Dasaratha's
+                  second wife, and convinced her to persuade her husband to
+                  instead make Bharata heir to the throne. On top of this
+                  slight Rama was exiled from the kingdom for fourteen years.
+                  So, accompanied by Sita and his ever faithful companion
+                  Laksmana, Rama went to live in the far south in Citrakuta,
+                  deep in the Dandaka forest. Meanwhile, Dasaratha died, but
+                  Bharata, seeing the injustice of Rama's treatment, decided
+                  not to become king but instead to search for and return Rama
+                  to his rightful home and birthright. When the two brothers
+                  met once again, Rama obstinately refused to return to
+                  Ayodhya until he had fulfilled his father's wishes and
+                  served out his fourteen years of exile. After much
+                  discussion, Bharata agreed to act as regent until that time,
+                  and to prove to his subjects Rama's decision, he took his
+                  brother's shoes as a symbol of Rama's royal status.
+                </p>
+              </div>
+
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">
+                  Rama & Ravana Clash
+                </h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Rama did not stay still in the remainder of his exile but
+                  visited many sages. Eventually, he ended up at Pancavati
+                  along the river Godavari, an area plagued by demons. One in
+                  particular, Surpanakha, the sister of Ravana, fell in love
+                  with Rama, and when her advances were resisted, she attacked
+                  Sita in revenge. Laksmana was the first to react and cut off
+                  the ears and nose of Surpanakha. Not best pleased with this
+                  treatment, the enraged demoness gathered an army of demons
+                  to attack the trio. In an epic battle Rama defeated them
+                  all; however, Surpanakha was not finished with the matter
+                  and she persuaded Ravana that Sita was a girl worth fighting
+                  for. Accordingly, the demon king sought out Rama's home, and
+                  while Rama was distracted in the hunt for a deer (who was
+                  actually Ravana's magician Maricha in disguise), abducted
+                  Sita, taking her back to Lanka in his aerial chariot to be
+                  kept captive in his beautiful Ashoka garden.
+                </p>
+              </div>
+
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">
+                  Worship & Representation in Art
+                </h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Rama remains a figure of worship across India and South-east
+                  Asia but especially in Oude and Bihar. He has, for example,
+                  a magnificent temple at Ramesvaram, notable for its 17th
+                  century CE columned corridor. In addition, the Ramanandis
+                  are the largest and perhaps strictest Vaishnava monastic
+                  order. Rama is also considered by some Buddhists to be an
+                  avatar of Buddha, and sculptures of the hero sometimes
+                  appears on the exterior of Buddhist temples. In art Rama is
+                  always youthful and typically has green or blue skin, holds
+                  a bow and arrows, and wears a yellow robe. He is most often
+                  seen with Sita, Laksmana, and Hanuman – collectively known
+                  as Rama's family or Rama Parivara. Episodes from the
+                  Ramayana are especially popular in Hindu sculpture, wall
+                  paintings, and art in general, most of all forest scenes
+                  with Rama hunting the deer and the epic battle with Ravana.
+                </p>
+              </div>
+
+              <!-- Other sections of the text go here -->
             </div>
           </div>
-          <div class="modal-footer">
-            <button class="modal-close">Close Modal</button>
+          <div class="modal-content-right">
+            <img src="images/characters/Rama.jpeg">
           </div>
         </div>
-      </div>
-      <div class="modal" id="modal4">
-        <div class="modal-content">
-          <div class="modal-header">
-            Origins of Ravana
-            <button class="modal-close">&times;</button>
-          </div>
-          <div class="modal-body custom-popup">
-            <div class="modal-content-left"></div>
-            <div class="modal-content-right">
-              <!-- Image Content -->
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button class="modal-close">Close Modal</button>
-          </div>
-        </div>
-      </div>
-      <div class="modal" id="modal5">
-        <div class="modal-content">
-          <div class="modal-header">
-            Other Characters
-            <button class="modal-close">&times;</button>
-          </div>
-          <div class="character-cards"></div>
-          <div class="modal-footer">
-            <button class="modal-close">Close Modal</button>
-          </div>
+        <div class="modal-footer">
+          <button class="modal-close">Close Modal</button>
         </div>
       </div>
     </div>
-    <footer>
-      <div id="footer-sidebar">
-        <button id="footer-toggle-btn">Kandas</button>
-        <div id="footer-buttons">
-          <button class="footer-button" id="bala-button">Bala</button>
-          <button class="footer-button" id="ayodhya-button">Ayodhya</button>
-          <button class="footer-button" id="aranya-button">Aranya</button>
-          <button class="footer-button" id="kiskindha-button">
-            Kishkindha
-          </button>
-          <button class="footer-button" id="sundara-button">Sundara</button>
-          <button class="footer-button" id="yuddha-button">Yuddha</button>
-          <button class="footer-button" id="uttara-button">Uttara</button>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      document
-        .getElementById("bala-button")
-        .addEventListener("click", function () {
-          // Remove previously appended script element
-          const existingScript = document.querySelector(
-            'script[src="./src/js/kandas/bala.js"]'
-          );
-          if (existingScript) {
-            existingScript.remove();
-          }
-          // Load JavaScript file for Bala with a random query parameter
-          var script = document.createElement("script");
-          script.src = "./src/js/kandas/bala.js" + "?rand=" + Math.random();
-          script.type = "module";
-          document.body.appendChild(script);
-        });
-
-      document
-        .getElementById("ayodhya-button")
-        .addEventListener("click", function () {
-          // Remove previously appended script element
-          const existingScript = document.querySelector(
-            'script[src="./src/js/kandas/ayodhya.js"]'
-          );
-          if (existingScript) {
-            existingScript.remove();
-          }
-          // Load JavaScript file for Bala with a random query parameter
-          var script = document.createElement("script");
-          script.src = "./src/js/kandas/ayodhya.js" + "?rand=" + Math.random();
-          script.type = "module";
-          document.body.appendChild(script);
-        });
-
-      document
-        .getElementById("aranya-button")
-        .addEventListener("click", function () {
-          // Remove previously appended script element
-          const existingScript = document.querySelector(
-            'script[src="./src/js/kandas/aranya.js"]'
-          );
-          if (existingScript) {
-            existingScript.remove();
-          }
-          // Load JavaScript file for Bala with a random query parameter
-          var script = document.createElement("script");
-          script.src = "./src/js/kandas/aranya.js" + "?rand=" + Math.random();
-          script.type = "module";
-          document.body.appendChild(script);
-        });
-
-      document
-        .getElementById("kiskindha-button")
-        .addEventListener("click", function () {
-          // Remove previously appended script element
-          const existingScript = document.querySelector(
-            'script[src="./src/js/kandas/kiskindha.js"]'
-          );
-          if (existingScript) {
-            existingScript.remove();
-          }
-          // Load JavaScript file for Bala with a random query parameter
-          var script = document.createElement("script");
-          script.src =
-            "./src/js/kandas/kiskindha.js" + "?rand=" + Math.random();
-          script.type = "module";
-          document.body.appendChild(script);
-        });
-
-      document
-        .getElementById("sundara-button")
-        .addEventListener("click", function () {
-          // Remove previously appended script element
-          const existingScript = document.querySelector(
-            'script[src="./src/js/kandas/sundara.js"]'
-          );
-          if (existingScript) {
-            existingScript.remove();
-          }
-          // Load JavaScript file for Bala with a random query parameter
-          var script = document.createElement("script");
-          script.src = "./src/js/kandas/sundara.js" + "?rand=" + Math.random();
-          script.type = "module";
-          document.body.appendChild(script);
-        });
-
-      document
-        .getElementById("yuddha-button")
-        .addEventListener("click", function () {
-          // Remove previously appended script element
-          const existingScript = document.querySelector(
-            'script[src="./src/js/kandas/yuddha.js"]'
-          );
-          if (existingScript) {
-            existingScript.remove();
-          }
-          // Load JavaScript file for Bala with a random query parameter
-          var script = document.createElement("script");
-          script.src = "./src/js/kandas/yuddha.js" + "?rand=" + Math.random();
-          script.type = "module";
-          document.body.appendChild(script);
-        });
-
-      document
-        .getElementById("uttara-button")
-        .addEventListener("click", function () {
-          // Remove previously appended script element
-          const existingScript = document.querySelector(
-            'script[src="./src/js/kandas/uttara.js"]'
-          );
-          if (existingScript) {
-            existingScript.remove();
-          }
-          // Load JavaScript file for Bala with a random query parameter
-          var script = document.createElement("script");
-          script.src = "./src/js/kandas/uttara.js" + "?rand=" + Math.random();
-          script.type = "module";
-          document.body.appendChild(script);
-        });
-
-      // Repeat the above process for other buttons...
-    </script>
-
-    <div id="map" style="height: 100vh - 90px"></div>
-
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    <script type="module" src="./src/js/main.js"></script>
-    <script>
-      document
-        .getElementById("footer-toggle-btn")
-        .addEventListener("click", function () {
-          document.getElementById("footer-sidebar").classList.toggle("active");
-        });
-    </script>
-    <script src="./src/js/dropDown.js"></script>
-    <div class="modal" id="">
+    <div class="modal" id="modal4">
       <div class="modal-content">
         <div class="modal-header">
-          <!-- Modal title (optional) -->
-          <button class="modal-close">×</button>
+          Origins of Ravana
+          <button class="modal-close">&times;</button>
         </div>
-        <div class="modal-body">
-          <!-- Modal content will be dynamically loaded here -->
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left">
+            <div style="
+                  font-family: Arial, sans-serif;
+                  padding: 20px;
+                  max-width: 800px;
+                  margin: 0 auto;
+                ">
+              <h1 style="font-size: 28px; color: white">
+                Ravana: Our other hero
+              </h1>
+              <br />
+              <div style="margin-bottom: 30px">
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Ravana is the mythical multi-headed demon-king of Lanka in Hindu mythology. With ten heads and twenty
+                  arms, Ravana could change into any form he wished. Representing the very essence of evil, he famously
+                  fought and ultimately lost a series of epic battles against the hero Rama, seventh avatar of Vishnu.
+                </p>
+              </div>
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">Family</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Ravana was a terrible demon (raksasa) who was the king of all demons and of the fortress island of
+                  Lanka (modern-day Sri Lanka). His father was Visravas (son of Pulastya, one of the creator Prajapati)
+                  and his mother Nikasa, also a demon and mother of the cannibal demons, the Pisitasanas. Ravana
+                  acquired his throne through foul means when he expelled his half-brother Kubera, god of wealth, from
+                  the island. Ravana had many sons, notably Aksa, who had three heads, symbolic of the three stages of
+                  fever (heat, cold, and sweating), and Indrajit (aka Meghanada), who could make himself invisible.
+                </p>
+              </div>
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">Ravana & Nandisa</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  The Ramayana is the oldest Sanskrit epic and was written sometime in the 5th century BCE, with some
+                  later additions. Ravana's name is explained, therein, in a colourful myth where the demon-king
+                  challenges Nandisa (actually the great god Shiva and also known as Nandisvara) and comes off worse.
+                  According to the story, one day Ravana met a dark dwarf with a monkey face while he was passing
+                  through the mountains of Saravana. The dwarf would not let Ravana pass because his master Shiva was
+                  busy hunting there and was not to be disturbed. Ravana questioned who this Shiva was and shook the
+                  mountain in rage. This disturbed Shiva and his wife Parvati; the latter trembled with fear as they sat
+                  upon the shaking peak, but Shiva calmly placed his toe upon the ground and the whole mountain fell on
+                  top of Ravana's many arms. The demon let out such a shuddering cry of pain that Shiva named the demon
+                  Ravana after his cry (rava). Ravana was only released from his predicament after 1,000 years of
+                  pleading to the great god.
+                </p>
+              </div>
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">Rama & Surpanakha</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  The Ramayana is really concerned with the story of the semi-divine Lord Rama, believed by many Hindus
+                  to be based on a historical figure. He is perhaps the most virtuous figure in all of Hindu mythology.
+                  His adventures illustrate above all the importance and rewards of fulfilling one's pious duty or
+                  dharma, and he had been born for one specific task – to answer the call of the gods and kill the
+                  fearsome multi-headed demon Ravana, terror of the earth.
+                  Rama's troubles began when he was exiled from his father's kingdom, a victim of a conspiracy concocted
+                  by his mother's jealous hunchback slave, Manthara. On top of that, his brother Bharata was made heir
+                  in Rama's place. For 14 years, Rama had to wander the earth, visit sages, and wait to fulfil his
+                  destiny.
+                  Rama, his wife Sita, and great friend Laksmana one day eventually ended up at Pancavati along the
+                  river Godavari, an area plagued by demons. One in particular, Surpanakha, the sister of Ravana, fell
+                  in love with Rama, and when her advances were resisted, she attacked Sita in revenge. Laksmana was the
+                  first to react and cut off the ears and nose of Surpanakha. Not best pleased with this treatment, the
+                  enraged demoness gathered an army of demons to attack the trio. In an epic battle, Rama defeated them
+                  all; however, Surpanakha was not finished with the matter, and she persuaded Ravana that Sita was a
+                  girl worth fighting for. Accordingly, the demon king sought out Rama's home, and while Rama was
+                  distracted in the hunt for a deer (who was actually Ravana's magician Maricha in disguise), abducted
+                  Sita, taking her back to Lanka in his aerial chariot to be kept captive in the beautiful Ashoka garden
+                  of his palace.
+                </p>
+              </div>
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: white">Ravana in Hindu Art</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  Ravana is usually depicted as multi-headed and multi-armed, carrying all manner of lethal weapons. He
+                  appears in the decorative sculpture of Hindu temples, most often in battle scenes with Rama or riding
+                  his winged chariot. In a celebrated relief scene on the 8th-century CE Kailasanatha temple at Ellora,
+                  Ravana is shown shaking the sacred Kailasa mountain (as in the Nandisa story) on which sit Shiva and
+                  Parvati. Unusually, Ravana is carved completely in the round. Scenes from the Ramayana involving
+                  Ravana were also very popular from the 16th century CE in Indian watercolours, especially esteemed are
+                  those from Udaipur and the Pahari paintings.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content-right">
+            <img src="images/characters/ravana_origin.jpg">
+          </div>
         </div>
-        <!-- <div class="modal-footer">
-        <button class="modal-close">Close</button>
-      </div> -->
+        <div class="modal-footer">
+          <button class="modal-close">Close Modal</button>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="modal" id="modal5">
+      <div class="modal-content">
+        <div class="modal-header">
+          Other Characters
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="character-cards"></div>
+        <div class="modal-footer">
+          <button class="modal-close">Close Modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="footer-sidebar">
+      <button id="footer-toggle-btn">Kandas</button>
+      <div id="footer-buttons">
+        <button class="footer-button" id="bala-button">Bala</button>
+        <button class="footer-button" id="ayodhya-button">Ayodhya</button>
+        <button class="footer-button" id="aranya-button">Aranya</button>
+        <button class="footer-button" id="kiskindha-button">
+          Kishkindha
+        </button>
+        <button class="footer-button" id="sundara-button">Sundara</button>
+        <button class="footer-button" id="yuddha-button">Yuddha</button>
+        <button class="footer-button" id="uttara-button">Uttara</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document
+      .getElementById("bala-button")
+      .addEventListener("click", function () {
+        // Remove previously appended script element
+        const existingScript = document.querySelector(
+          'script[src="./src/js/kandas/bala.js"]'
+        );
+        if (existingScript) {
+          existingScript.remove();
+        }
+        // Load JavaScript file for Bala with a random query parameter
+        var script = document.createElement("script");
+        script.src = "./src/js/kandas/bala.js" + "?rand=" + Math.random();
+        script.type = "module";
+        document.body.appendChild(script);
+      });
+
+    document
+      .getElementById("ayodhya-button")
+      .addEventListener("click", function () {
+        // Remove previously appended script element
+        const existingScript = document.querySelector(
+          'script[src="./src/js/kandas/ayodhya.js"]'
+        );
+        if (existingScript) {
+          existingScript.remove();
+        }
+        // Load JavaScript file for Bala with a random query parameter
+        var script = document.createElement("script");
+        script.src = "./src/js/kandas/ayodhya.js" + "?rand=" + Math.random();
+        script.type = "module";
+        document.body.appendChild(script);
+      });
+
+    document
+      .getElementById("aranya-button")
+      .addEventListener("click", function () {
+        // Remove previously appended script element
+        const existingScript = document.querySelector(
+          'script[src="./src/js/kandas/aranya.js"]'
+        );
+        if (existingScript) {
+          existingScript.remove();
+        }
+        // Load JavaScript file for Bala with a random query parameter
+        var script = document.createElement("script");
+        script.src = "./src/js/kandas/aranya.js" + "?rand=" + Math.random();
+        script.type = "module";
+        document.body.appendChild(script);
+      });
+
+    document
+      .getElementById("kiskindha-button")
+      .addEventListener("click", function () {
+        // Remove previously appended script element
+        const existingScript = document.querySelector(
+          'script[src="./src/js/kandas/kiskindha.js"]'
+        );
+        if (existingScript) {
+          existingScript.remove();
+        }
+        // Load JavaScript file for Bala with a random query parameter
+        var script = document.createElement("script");
+        script.src =
+          "./src/js/kandas/kiskindha.js" + "?rand=" + Math.random();
+        script.type = "module";
+        document.body.appendChild(script);
+      });
+
+    document
+      .getElementById("sundara-button")
+      .addEventListener("click", function () {
+        // Remove previously appended script element
+        const existingScript = document.querySelector(
+          'script[src="./src/js/kandas/sundara.js"]'
+        );
+        if (existingScript) {
+          existingScript.remove();
+        }
+        // Load JavaScript file for Bala with a random query parameter
+        var script = document.createElement("script");
+        script.src = "./src/js/kandas/sundara.js" + "?rand=" + Math.random();
+        script.type = "module";
+        document.body.appendChild(script);
+      });
+
+    document
+      .getElementById("yuddha-button")
+      .addEventListener("click", function () {
+        // Remove previously appended script element
+        const existingScript = document.querySelector(
+          'script[src="./src/js/kandas/yuddha.js"]'
+        );
+        if (existingScript) {
+          existingScript.remove();
+        }
+        // Load JavaScript file for Bala with a random query parameter
+        var script = document.createElement("script");
+        script.src = "./src/js/kandas/yuddha.js" + "?rand=" + Math.random();
+        script.type = "module";
+        document.body.appendChild(script);
+      });
+
+    document
+      .getElementById("uttara-button")
+      .addEventListener("click", function () {
+        // Remove previously appended script element
+        const existingScript = document.querySelector(
+          'script[src="./src/js/kandas/uttara.js"]'
+        );
+        if (existingScript) {
+          existingScript.remove();
+        }
+        // Load JavaScript file for Bala with a random query parameter
+        var script = document.createElement("script");
+        script.src = "./src/js/kandas/uttara.js" + "?rand=" + Math.random();
+        script.type = "module";
+        document.body.appendChild(script);
+      });
+
+    // Repeat the above process for other buttons...
+  </script>
+
+  <div id="map" style="height: 100vh - 90px"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script type="module" src="./src/js/main.js"></script>
+  <script>
+    document
+      .getElementById("footer-toggle-btn")
+      .addEventListener("click", function () {
+        document.getElementById("footer-sidebar").classList.toggle("active");
+      });
+  </script>
+  <script src="./src/js/dropDown.js"></script>
+  <div class="modal" id="">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- Modal title (optional) -->
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <!-- Modal content will be dynamically loaded here -->
+      </div>
+      <!-- <div class="modal-footer">
+        <button class="modal-close">Close</button>
+      </div> -->
+    </div>
+  </div>
+</body>
+
 </html>
