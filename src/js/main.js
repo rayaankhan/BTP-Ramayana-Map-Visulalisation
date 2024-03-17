@@ -7,7 +7,7 @@ const data_path = "../../json/main.json";
 const location_file_path = "../../json/location.json";
 const marker_color = "blue";
 
-console.log("Main")
+// console.log("Main")
 
 // Main execution
 const map = initializeMap();
@@ -20,7 +20,7 @@ getData(data_path).then((pointsData) => {
     const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
   });
 });
-setupSidebar();
+setupSidebar(map);
 setupNavbarLinks();
 setupModals();
 createKandaButtons();

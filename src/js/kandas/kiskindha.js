@@ -5,7 +5,7 @@ import { setupSidebar, setupNavbarLinks, setupModals } from '../modules/setup.js
 const data_path = "../../../json/kandas/kiskindha.json";
 const location_file_path = "../../../json/location.json";
 const marker_color = "orange";
-console.log("Kiskindha")
+// console.log("Kiskindha")
 
 // Main execution
 const map = initializeMap();
@@ -21,14 +21,12 @@ getData(data_path).then((pointsData) => {
     });
 
     creationPromise.then(([arrows, circles]) => {
-      console.log(circles[0]);
       // Now circles array is fully populated, you can safely access it here.
-      // circles[0].fireEvent("click");
     }).catch(error => {
       console.error('Error creating circles and arrows:', error);
     });
   });
 });
-setupSidebar();
+setupSidebar(map);
 setupNavbarLinks();
 setupModals();

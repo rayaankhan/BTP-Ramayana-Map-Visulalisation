@@ -6,7 +6,7 @@ const data_path = "../../../json/kandas/bala.json";
 const location_file_path = "../../../json/location.json";
 const marker_color = "maroon";
 
-console.log("Bala")
+// console.log("Bala")
 
 // Main execution
 const map = initializeMap();
@@ -19,6 +19,6 @@ getData(data_path).then((pointsData) => {
     const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
   });
 });
-setupSidebar();
+setupSidebar(map);
 setupNavbarLinks();
 setupModals();

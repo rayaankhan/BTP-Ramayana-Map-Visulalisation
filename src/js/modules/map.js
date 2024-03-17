@@ -1,15 +1,3 @@
-// map.js
-// import * as L from 'leaflet';
-
-// export const initializeMap = () => {
-//   const map = L.map("map").setView([20.5937, 78.9629], 5);
-
-//   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-//     attribution: "Map data © OpenStreetMap contributors",
-//   }).addTo(map);
-
-//   return map;
-// };
 
 let mapInstance = null; // variable to store the map instance
 let isMapInitialized = false; // flag to track initialization status
@@ -43,7 +31,9 @@ export const zoomSetter = (arrows, idx, map) => {
     paddingTopLeft: [150, 150], // Add padding to the top left corner (in pixels)
     paddingBottomRight: [100, 100], // Add padding to the bottom right corner (in pixels)
   };
-  
+  if(idx == arrows.length){
+    return -1;
+  }
   const arrowCoordinates = arrows[idx].getLatLngs();
   if(arrowCoordinates[0].lat == arrowCoordinates[1].lat && arrowCoordinates[0].lng == arrowCoordinates[1].lng) {
     map.setView(arrowCoordinates[0], 7, options);

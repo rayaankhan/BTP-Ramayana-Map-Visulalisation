@@ -71,7 +71,7 @@ export function updateModalContent(kandaName) {
 
         // Create and append image element
         const image = document.createElement("img");
-        console.log("matching kanda ", matchingKanda);
+        // console.log("matching kanda ", matchingKanda);
         image.src = matchingKanda.image; // Use the 'img' property from your JSON
         image.alt = `Image for ${kandaName}`;
         image.style.width = "100%";
