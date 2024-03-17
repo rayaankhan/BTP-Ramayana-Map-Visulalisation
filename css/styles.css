@@ -357,7 +357,7 @@ footer {
 }
 
 .leaflet-popup-content-wrapper {
-  background-color: #3b3a3a; /* Change to match your website theme */
+  background-color: rgba(44, 43, 43, 0.799); /* Change to match your website theme */
   color: white; /* Text color */
   font-family: 'Playfair Display', serif; /* Font family */
   border-radius: 8px; /* Rounded corners */
@@ -439,7 +439,7 @@ footer {
 .dropdown-content {
   position: fixed;
   top: 90px; /* Adjust as needed */
-  right: 0;
+  right: -250px;
   width: 250px;
   color: white;
   background-color: rgba(44, 43, 43, 0.946); /* Adjust background color as needed */
@@ -455,6 +455,7 @@ footer {
 }
 
 .dropdown-content.show {
+  right: 0;
   display: block;
   z-index: 1500;
   opacity: 1;
