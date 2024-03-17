@@ -6,7 +6,7 @@ const data_path = "../../../json/kandas/yuddha.json";
 const location_file_path = "../../../json/location.json";
 const marker_color = "yellow";
 
-console.log("Yuddha")
+// console.log("Yuddha")
 
 // Main execution
 const map = initializeMap();
@@ -16,9 +16,9 @@ const map = initializeMap();
 getData(data_path).then((pointsData) => {
   // console.log(pointsData);
   getData(location_file_path).then((location_data) => {
-    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_colorv;
+    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
   });
 });
-setupSidebar();
+setupSidebar(map);
 setupNavbarLinks();
 setupModals();

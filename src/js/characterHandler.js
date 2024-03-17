@@ -5,7 +5,7 @@ function openCharacterModal(characterName) {
     fetch(characters_path)
         .then(response => response.json())
         .then(data => {
-            console.log(data); // Log the fetched data to the console
+            // console.log(data); // Log the fetched data to the console
             const characterDescription = data.find(character => character.name === characterName);
             // Display the character modal with the fetched description
             if (characterDescription) {

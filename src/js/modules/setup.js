@@ -1,5 +1,5 @@
 // Sidebar and toggle button module
-export const setupSidebar = () => {
+export const setupSidebar = (map) => {
   const sidebar = document.getElementById("sidebar");
   const sidebarToggle = document.getElementById("sidebar-toggle");
 

@@ -6,7 +6,7 @@ const data_path = "../../../json/kandas/uttara.json";
 const location_file_path = "../../../json/location.json";
 const marker_color = "red";
 
-console.log("Uttara")
+// console.log("Uttara")
 
 // Main execution
 const map = initializeMap();
@@ -19,6 +19,6 @@ getData(data_path).then((pointsData) => {
     const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
   });
 });
-setupSidebar();
+setupSidebar(map);
 setupNavbarLinks();
 setupModals();
