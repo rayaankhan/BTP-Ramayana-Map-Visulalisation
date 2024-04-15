@@ -2,7 +2,7 @@ import { openPopupWithList } from "./popup.js";
 import { zoomSetter } from "./map.js";
 
 // Circle and arrow creation module with list content
-export const createCirclesAndArrowsWithList = (
+export const createCirclesAndArrowsWithList = async (
   map,
   pointsData,
   locations_data,
@@ -10,7 +10,7 @@ export const createCirclesAndArrowsWithList = (
 ) => {
   const arrows = [];
   const circles = [];
-  const location_repeater = [];
+  const location_repeater = []; // stores all the unique locations
 
   for (let i = 0; i < pointsData.length; i++) {
     const point = pointsData[i];
@@ -20,22 +20,40 @@ export const createCirclesAndArrowsWithList = (
         fl = 1;
       }
     });
+    // if (fl == 0) {
+    //   location_repeater.push(point.location);
+    //   createResponsiveCircle(map, point, locations_data, marker_color, () => {
+    //     toggleArrows(i, arrows);
+    //     openPopupWithList(i, arrows, map, pointsData, locations_data);
+    //     zoomSetter(arrows, i, map);
+    //     location_repeater.push(point.location);
+    //   }).then((circle) => {
+    //     circles.push(circle);
+    //   });
+    // }
     if (fl == 0) {
       location_repeater.push(point.location);
-      createResponsiveCircle(map, point, locations_data, marker_color, () => {
-        toggleArrows(i, arrows);
-        openPopupWithList(i, arrows, map, pointsData, locations_data);
-        zoomSetter(arrows, i, map);
-        location_repeater.push(point.location);
-      }).then((circle) => {
+      try {
+        const circle = await createResponsiveCircle(map, point, locations_data, marker_color, () => {
+          toggleArrows(i, arrows);
+          openPopupWithList(i, arrows, map, pointsData, locations_data);
+          zoomSetter(arrows, i, map);
+          location_repeater.push(point.location);
+        });
         circles.push(circle);
-      });
+      } catch (error) {
+        console.error("Error creating circle:", error);
+      }
     }
 
     const arrow = createArrow(pointsData, i, map, locations_data);
     if (arrow != -1) {
       arrows.push(arrow);
     }
+  }
+  // Trigger click event on the first circle
+  if (circles.length > 0) {
+    circles[0].fire("click");
   }
 
   return [arrows, circles];

@@ -9,27 +9,27 @@ const marker_color = "green";
 
 // Main execution
 const map = initializeMap();
-// console.log(map);
 
-// console.log(location_data)
+// getData(data_path).then((pointsData) => {
+//   getData(location_file_path).then((location_data) => {
+//     const creationPromise = new Promise((resolve, reject) => {
+//       const [arrows, circles] = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
+//       resolve([arrows, circles]);
+//     });
+
+//     creationPromise.then(([arrows, circles]) => {
+//     }).catch(error => {
+//       console.error('Error creating circles and arrows:', error);
+//     });
+//   });
+// });
+
 getData(data_path).then((pointsData) => {
-  // console.log(pointsData);
   getData(location_file_path).then((location_data) => {
-    const creationPromise = new Promise((resolve, reject) => {
-      const [arrows, circles] = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
-      resolve([arrows, circles]);
-    });
-
-    creationPromise.then(([arrows, circles]) => {
-      // console.log(circles);
-      // console.log(circles[0]);
-      // Now circles array is fully populated, you can safely access it here.
-      // circles[0].fireEvent("click");
-    }).catch(error => {
-      console.error('Error creating circles and arrows:', error);
-    });
+    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
   });
 });
+
 setupSidebar(map);
 setupNavbarLinks();
 setupModals();
