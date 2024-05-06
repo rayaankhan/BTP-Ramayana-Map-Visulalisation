@@ -22,6 +22,8 @@ export function createKandaButtons() {
       const kandaButtonsContainer = document.getElementById("kanda-buttons");
 
       // Display the summary initially
+      const initialHeading = document.getElementById("kanda-heading");
+      initialHeading.textContent = "Overview";
       const modalContentLeft = document.querySelector("#modal1 .modal-content-left");
       modalContentLeft.innerHTML = kandaSummary;
       const modalContentRight = document.querySelector("#modal1 .modal-content-right");

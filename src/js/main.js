@@ -14,10 +14,8 @@ const map = initializeMap();
 // console.log(map);
 
 getData(data_path).then((pointsData) => {
-  // console.log(pointsData)
-  // console.log(pointsData);
   getData(location_file_path).then((location_data) => {
-    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
+    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color,1);
   });
 });
 setupSidebar(map);

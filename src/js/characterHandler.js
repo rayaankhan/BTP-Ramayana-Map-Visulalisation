@@ -11,13 +11,19 @@ function openCharacterModal(characterName) {
             if (characterDescription) {
                 // Open modal with character description
                 const modalContent = document.querySelector('#modal5 .modal-content');
+
                 modalContent.innerHTML = `
                     <div class="modal-header">
                         ${characterName}
                         <button class="modal-close">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <p>${characterDescription.about}</p>
+                        <div class="modal-body-left" style="width: 70%;">
+                        <p style="color: white;">${characterDescription.about}</p>
+                        </div>
+                        <div class="modal-body-right" style="width: 30%; margin-left: 10px;height: 70%; display: flex; justify-content: center; align-items: center;">
+                            <img src="${characterDescription.image}" alt="${characterName}" style="max-height: 100%; max-width: 100%;">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button class="modal-close">Close Modal</button>
@@ -65,8 +71,8 @@ fetch(characters_path)
     .then(response => response.json())
     .then(data => {
         const characterCardsContainer = document.querySelector('.character-cards');
-
         // Loop through the data and create character cards
+        console.log("characCard container",characterCardsContainer)
         data.forEach(character => {
             const characterCard = document.createElement('div');
             characterCard.classList.add('character-card');
@@ -78,13 +84,14 @@ fetch(characters_path)
             const image = document.createElement('img');
             image.src = character.image;
             image.alt = character.name;
+            image.style.height = '85%'; // Set image height to 85% of the character card
             characterCard.appendChild(image);
 
             // Create and append character name element
             const name = document.createElement('p');
             name.textContent = character.name;
+            name.style.height = '15%'; // Set name height to 15% of the character card
             characterCard.appendChild(name);
-
             // Append the character card to the container
             characterCardsContainer.appendChild(characterCard);
         });
