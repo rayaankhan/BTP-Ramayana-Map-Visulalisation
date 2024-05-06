@@ -5,32 +5,11 @@ import { setupSidebar, setupNavbarLinks, setupModals } from '../modules/setup.js
 const data_path = "../../../json/kandas/aranya.json";
 const location_file_path = "../../../json/location.json";
 const marker_color = "blue";
-// console.log("Aranya")
 
-// Main execution
 const map = initializeMap();
-
-// getData(data_path).then((pointsData) => {
-//   getData(location_file_path).then((location_data) => {
-//     const creationPromise = new Promise((resolve, reject) => {
-//       const [arrows, circles] = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
-//       resolve([arrows, circles]);
-//     });
-
-//     creationPromise.then(([arrows, circles]) => {
-//       // console.log(circles);
-//       // console.log(circles[0]);
-//       // Now circles array is fully populated, you can safely access it here.
-//       // circles[0].fireEvent("click");
-//     }).catch(error => {
-//       console.error('Error creating circles and arrows:', error);
-//     });
-//   });
-// });
-
 getData(data_path).then((pointsData) => {
   getData(location_file_path).then((location_data) => {
-    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
+    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color,1);
   });
 });
 

@@ -1,36 +1,34 @@
+
 import { openPopupWithList } from "./popup.js";
 import { zoomSetter } from "./map.js";
 
-// Circle and arrow creation module with list content
 export const createCirclesAndArrowsWithList = async (
   map,
   pointsData,
   locations_data,
-  marker_color
+  marker_color,
+  incidentNumber
 ) => {
   const arrows = [];
   const circles = [];
+  const circles2 = [];
   const location_repeater = []; // stores all the unique locations
-
+  const repeated_location = []; // stores all the repeated locations
+  console.log("inci:->",incidentNumber)
   for (let i = 0; i < pointsData.length; i++) {
     const point = pointsData[i];
+    const circle = await createResponsiveCircle(map, point, locations_data, marker_color, () => {
+      toggleArrows(i, arrows);
+      openPopupWithList(i, arrows, map, pointsData, locations_data);
+      zoomSetter(arrows, i, map);
+    });
+    circles2.push(circle);
     let fl = 0;
     location_repeater.forEach((item, i) => {
       if (point.location == item) {
         fl = 1;
       }
     });
-    // if (fl == 0) {
-    //   location_repeater.push(point.location);
-    //   createResponsiveCircle(map, point, locations_data, marker_color, () => {
-    //     toggleArrows(i, arrows);
-    //     openPopupWithList(i, arrows, map, pointsData, locations_data);
-    //     zoomSetter(arrows, i, map);
-    //     location_repeater.push(point.location);
-    //   }).then((circle) => {
-    //     circles.push(circle);
-    //   });
-    // }
     if (fl == 0) {
       location_repeater.push(point.location);
       try {
@@ -51,10 +49,14 @@ export const createCirclesAndArrowsWithList = async (
       arrows.push(arrow);
     }
   }
-  // Trigger click event on the first circle
-  if (circles.length > 0) {
+  // if (incidentNumber == 1 && circles.length > 0) {
+  //   circles[0].fire("click");
+  // }
+  if (incidentNumber ==1 && circles.length > 0) {
     circles[0].fire("click");
-  }
+  } else if (incidentNumber && circles2.length > incidentNumber - 1) {
+    circles2[incidentNumber -1].fire("click");
+  } 
 
   return [arrows, circles];
 };
@@ -111,13 +113,6 @@ export const toggleArrows = (selectedIndex, arrows) => {
   if (selectedIndex >= arrows.length) return;
   const selectedArrows = arrows[selectedIndex];
   selectedArrows.setStyle({ opacity: 1 });
-  // if (selectedIndex - 1 >= 0) {
-  //   const selectedArrows = arrows[selectedIndex - 1];
-  //   selectedArrows.setStyle({ opacity: 1 });
-  // }
-  // selectedArrows.forEach((arrow) => {
-  //   arrow.setStyle({ opacity: 1 });
-  // });
 };
 
 const addArrowToMap = (lat, lon, nextlat, nextlon, map) => {
@@ -136,10 +131,7 @@ const addArrowToMap = (lat, lon, nextlat, nextlon, map) => {
 
 // This function creates arrow and adds it to the map too
 const createArrow = (pointsdata, idx, map, location_data) => {
-  // pointsdata is entire json having location, content, heading
-  // idx is the index from where arrow will start and end in the next point
-  // map is the ultimate map
-  // location_data is the json having location and its lat, lon
+
 
   if (idx == pointsdata.length - 1) {
     return -1;
@@ -156,15 +148,5 @@ const createArrow = (pointsdata, idx, map, location_data) => {
   const next_lon = next_coordinate[1];
 
   let arrow = addArrowToMap(cur_lat, cur_lon, next_lat, next_lon, map);
-
-  // for (let i = 0; i < list_content.length; i++) {
-  //   const nextno = list_content[i].nextno - 1;
-  //   const nextsubno = list_content[i].nextsubno - 1;
-  //   next_location.push([nextno, nextsubno]);
-  //   arrows.push(
-  //     addArrowToMap(lat, lon, pointsdata[nextno].lat, pointsdata[nextno].lon, map)
-  //   );
-  // }
-  // console.log(idx, arrows);
   return arrow;
 };

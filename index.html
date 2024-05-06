@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
   <script src="./src/js/characterHandler.js"></script>
+  <script src="./src/js/referenceHandler.js"></script>
   <title>Legends Of Ramayana</title>
 </head>
 
@@ -28,10 +29,19 @@
     </div>
     <div id="menu">
       <ul>
-        <li><a href="#" class="nav-link">Overview</a></li>
-        <li><a href="#" class="nav-link">Important Learnings</a></li>
+        <!-- <li>
+          <button class="modal-open sidebar-button" data-modal="modal7" style="background-color: transparent; color: rgb(240, 100, 6); border: none; font-size: 18px; text-decoration: none;">
+            Overview
+          </button>
+        <li> -->
         <li>
-          <button id="guide-dropdown-btn" class="nav-link">
+          <button class="modal-open sidebar-button" data-modal="modal8" style="background-color: transparent; color: rgb(240, 100, 6); border: none; font-size: 18px; text-decoration: none;">
+            Important Learnings
+          </button>
+        </li>
+        </button></li>
+        <li>
+          <button id="guide-dropdown-btn" class="nav-link" style="font-size: 20px;">
             Guide &#9660;
           </button>
           <ul id="guide-dropdown-content" class="dropdown-content"></ul>
@@ -69,6 +79,11 @@
           Other Characters
         </button>
       </li>
+      <li>
+        <button class="modal-open sidebar-button" data-modal="modal6">
+          Reference Stories
+        </button>
+      </li>
     </ul>
     <div class="modal" id="modal1">
       <div class="modal-content">
@@ -89,49 +104,70 @@
         </div>
       </div>
     </div>
-    <div class="modal" id="modal2">
+    <div class="modal" id="modal8">
       <div class="modal-content">
         <div class="modal-header">
-          Summary
+          Top Lessons from the Ramayana
           <button class="modal-close">&times;</button>
         </div>
         <div class="modal-body custom-popup">
           <div class="modal-content-left">
-            The Ramayana, an ancient Indian epic, unfolds the divine saga of Lord Rama, his beloved wife Sita, and his
-            devoted ally Hanuman, amidst a cosmic battle between good and evil. The story begins with the birth of Rama,
-            the eldest prince of Ayodhya, and follows his journey from princely heir to exiled wanderer, to triumphant
-            hero and righteous king.
-
-            At the heart of the Ramayana is the abduction of Sita by the demon king Ravana, setting in motion a series
-            of events that test the characters' virtues and resolve. Rama, accompanied by his loyal brother Lakshmana
-            and the wise sage Vishwamitra, embarks on a quest to protect the sages and vanquish the demon horde
-            troubling the land. Along the way, he encounters and defeats powerful adversaries, including the demoness
-            Tataka and the demon king Maricha.
-
-            During their exile in the forest, Sita is tricked by Ravana disguised as a golden deer and is subsequently
-            abducted. Rama's anguish at the loss of his beloved drives him to form alliances with the Vanara (monkey)
-            king Sugriva and his devoted general Hanuman. With the help of Hanuman and his army of monkeys, Rama crosses
-            the vast ocean to Lanka, the stronghold of Ravana, to rescue Sita.
-
-            The climax of the epic unfolds in a dramatic battle between the forces of good and evil. Rama, aided by his
-            divine weapons and the unwavering support of his allies, confronts Ravana in a fierce duel. After a grueling
-            fight, Rama emerges victorious, slaying Ravana and liberating Sita from captivity. However, Sita's purity
-            and fidelity are questioned by the people of Ayodhya, leading Rama to reluctantly exile her to the forest.
-
-            Despite his love for Sita, Rama feels bound by his duty as a king to uphold societal norms. Sita seeks
-            refuge in the hermitage of the sage Valmiki, where she gives birth to Rama's twin sons, Lava and Kusha. The
-            brothers grow up in the forest, unaware of their royal lineage, until fate reunites them with their father
-            during a grand Ashwamedha (horse sacrifice) ceremony organized by Rama.
-
-            Ultimately, the Ramayana culminates in Rama's triumphant return to Ayodhya, where he is crowned as the
-            rightful king, and Sita is vindicated of all doubts through a trial by fire. The epic concludes with Rama's
-            reign ushering in an era of peace, prosperity, and righteousness, symbolizing the victory of dharma over
-            adharma and the triumph of virtue over vice. Through its timeless narrative, the Ramayana continues to
-            inspire millions, offering invaluable lessons in devotion, duty, sacrifice, and the eternal quest for truth
-            and righteousness.
+            
+            <div>
+              <br><br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">1. Importance of Duty</h2>
+              <p>Rama's acceptance of his 14-year exile to honor his father's promise demonstrates the importance of duty over personal desires.</p>
+              <br><br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">2. Devotion to Parents</h2>
+              <br>
+              <p>Bharata's refusal to take the throne and insistence that Rama is the rightful king shows profound devotion and respect for his father's wishes.</p>
+              <br><br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">3. Power of Righteousness</h2>
+              <br>
+              <p>Rama's victory over Ravana, despite the latter's immense power, underlines that righteousness and moral integrity will eventually triumph over evil.</p>
+              <br><br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">4. Loyalty in Relationships</h2>
+              <br>
+              <p>Sita's unwavering faithfulness to Rama during her abduction exemplifies the strength of loyalty in maintaining relationships.</p>
+              <br><br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">5. Strength of Humility</h2>
+              <br>
+              <p>Ravana's downfall, primarily due to his arrogance and disregard for others, serves as a stark reminder of humility's value.</p>
+              <br><br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">6. Importance of Teamwork</h2>
+              <br>
+              <p>The construction of the Ram Setu highlights the achievements possible through teamwork, with each individual's contributions being vital.</p>
+              <br><br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">7. Courage and Bravery</h2>
+              <br><p>Hanuman's journey to Lanka, facing numerous challenges alone, teaches the value of courage and bravery in overcoming obstacles.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">8. Wisdom Over Strength</h2>
+              <br><p>Lakshmana's strategic thinking during battles illustrates that wisdom and intellect often prevail over mere physical strength.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">9. Consequences of Deceit</h2>
+              <br><p>Mareecha's role in Sita's abduction by aiding Ravana underlines how deceit can lead to harm and suffering for many.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">10. The Power of Forgiveness</h2>
+              <br><p>Rama's forgiveness of his enemies and acceptance of Vibhishana into his camp shows the liberating power of forgiveness.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">11. Adherence to One's Promises</h2>
+              <br><p>Rama's unwavering commitment to rescuing Sita, fulfilling his promise to her, stresses the importance of keeping one's word.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">12. Respecting Elders</h2>
+              <br><p>Rama's respect towards sage Vishwamitra and his adherence to the sage's advice exemplifies respect for knowledge and age.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">13. The Impact of Good Governance</h2>
+              <br><p>Rama's rule, known as Ram Rajya, symbolizes the ideal governance marked by fairness, prosperity, and justice for all citizens.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">14. Selflessness</h2>
+              <br><p>Lakshmana's readiness to accompany Rama into exile shows selflessness, placing the needs of loved ones above personal comfort.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">15. Value of Friendship</h2>
+              <br><p>Sugriva's alliance with Rama, offering mutual assistance in times of need, highlights the enduring value of true friendship.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">16. Overcoming Adversity</h2>
+              <br><p>The challenges faced by Rama, Lakshmana, and Sita in the forest teach resilience and the ability to overcome adversity with determination.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">17. Justice Prevails</h2>
+              <br><p>Rama's eventual victory in the battle against Ravana assures that justice will prevail, despite temporary setbacks.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">18. Sacrifice for Greater Good</h2>
+              <br><p>Rama's decision to banish Sita, to uphold societal norms, underscores the theme of personal sacrifice for the greater good.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">19. Patience and Timing</h2>
+              <br><p>Rama waiting for the right moment to attack Lanka, rather than rushing into battle, underscores the importance of patience and timing.</p>
+              <br><br><h2 style="font-size: 24px; color: rgb(240, 100, 6)">20. Spiritual Growth</h2>
+              <br><p>The entire journey of Rama can be seen as an allegory for one's own spiritual journey, facing and overcoming various 'demons' or challenges towards enlightenment.</p>
           </div>
-          <div class="modal-content-right">
-            <img src="images/kanda/image.png">
+          
           </div>
         </div>
         <div class="modal-footer">
@@ -158,121 +194,64 @@
               </h1>
               <br />
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">Rama's Family</h2>
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Lineage and Background:</h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  Rama's father is King Dasaratha, a prince of the solar race,
-                  and his mother is Queen Kausalya. Rama was born at the end
-                  of the Second Age or Treta-yuga and he came into the world
-                  specifically at the bidding of the gods to deal with the
-                  fearsome multi-headed demon Ravana, the king of Lanka
-                  (modern Sri Lanka). The great god Vishnu answered the gods'
-                  call and appeared in a sacrificial fire made by Dasaratha.
-                  The pious king was presented with a pot of nectar, and he
-                  gave half of it to Kausalya who produced half-divine Rama as
-                  a consequence. Rama had three half-brothers – Bharata,
-                  Lakshmana, and Shatrughna - all with some, albeit lesser,
-                  divine qualities. Rama's favourite brother and great
-                  companion was Laksmana, son of Sumitra, while his loyal
-                  servant was the monkey warrior Hanuman (or Hanumat).
+                  Lord Rama belongs to the illustrious Ikshvaku dynasty, also known as the Raghu dynasty. This lineage traces its origins to Manu, the progenitor of humanity according to Hindu mythology. Ikshvaku, the founder of this dynasty, was a noble ruler known for his righteousness. Over generations, the dynasty produced several heroic and virtuous kings, including Lord Rama's father, King Dasharatha.
                 </p>
               </div>
 
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">Rama Meets Sita</h2>
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Dasharatha's Childlessness:</h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  Rama's first adventure occurred when the sage Visvamitra
-                  asked for help in fighting a demon or raksasa. Rama and
-                  Laksmana, leaving their childhood home at Ayodhya capital of
-                  the northern kingdom of Koshala, followed Visvamitra to his
-                  home and there killed Taraka, a terrible female demon. In
-                  gratitude Rama was given divine weapons, and he set off for
-                  more adventures, ending up in Mithila. There Janaka the king
-                  of Videha hosted our hero, and he met the king's beautiful
-                  daughter Sita (also called Janaki or Maithili). The king had
-                  promised the princess in marriage to anyone who could manage
-                  to bend a huge bow which had once been the weapon of the
-                  great god Shiva. Rama, with his divine strength, did more
-                  than just bend the bow but broke it in half and so won the
-                  hand of Sita, his first and most revered wife.
+                  King Dasharatha's struggle with childlessness was a source of great sorrow for him, as having an heir was crucial for the continuity of his lineage and the kingdom. Despite having three queens, his lack of offspring led him to seek a solution through the performance of the Putrakameshti Yagna.
                 </p>
               </div>
 
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">Rama's Exile</h2>
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">The Putrakameshti Yagna:</h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  Rama's succession to the throne of Ayodhya was made
-                  difficult by his mother's hunchback slave Manthara. Jealous
-                  of Rama, she soured the opinion of Kaikeyi, Dasaratha's
-                  second wife, and convinced her to persuade her husband to
-                  instead make Bharata heir to the throne. On top of this
-                  slight Rama was exiled from the kingdom for fourteen years.
-                  So, accompanied by Sita and his ever faithful companion
-                  Laksmana, Rama went to live in the far south in Citrakuta,
-                  deep in the Dandaka forest. Meanwhile, Dasaratha died, but
-                  Bharata, seeing the injustice of Rama's treatment, decided
-                  not to become king but instead to search for and return Rama
-                  to his rightful home and birthright. When the two brothers
-                  met once again, Rama obstinately refused to return to
-                  Ayodhya until he had fulfilled his father's wishes and
-                  served out his fourteen years of exile. After much
-                  discussion, Bharata agreed to act as regent until that time,
-                  and to prove to his subjects Rama's decision, he took his
-                  brother's shoes as a symbol of Rama's royal status.
+                  The Putrakameshti Yagna was a significant Vedic ritual performed by King Dasharatha under the guidance of Sage Rishyashringa. This complex and devout ritual involved elaborate ceremonies and offerings aimed at invoking divine blessings for progeny. The successful completion of this yagna played a pivotal role in fulfilling Dasharatha's desire for children.
                 </p>
               </div>
 
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">
-                  Rama & Ravana Clash
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">
+                  Divine Blessings:
                 </h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  Rama did not stay still in the remainder of his exile but
-                  visited many sages. Eventually, he ended up at Pancavati
-                  along the river Godavari, an area plagued by demons. One in
-                  particular, Surpanakha, the sister of Ravana, fell in love
-                  with Rama, and when her advances were resisted, she attacked
-                  Sita in revenge. Laksmana was the first to react and cut off
-                  the ears and nose of Surpanakha. Not best pleased with this
-                  treatment, the enraged demoness gathered an army of demons
-                  to attack the trio. In an epic battle Rama defeated them
-                  all; however, Surpanakha was not finished with the matter
-                  and she persuaded Ravana that Sita was a girl worth fighting
-                  for. Accordingly, the demon king sought out Rama's home, and
-                  while Rama was distracted in the hunt for a deer (who was
-                  actually Ravana's magician Maricha in disguise), abducted
-                  Sita, taking her back to Lanka in his aerial chariot to be
-                  kept captive in his beautiful Ashoka garden.
+                  As a result of the Putrakameshti Yagna and the gods' benevolence, Queen Kausalya, Kaikeyi, and Sumitra were blessed with the divine nectar (payasam), which facilitated their pregnancies. The consumption of this sacred substance symbolized the divine intervention that led to the birth of Lord Rama and his brothers.
                 </p>
               </div>
 
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">
-                  Worship & Representation in Art
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">
+                  The Birth of Lord Rama:
                 </h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  Rama remains a figure of worship across India and South-east
-                  Asia but especially in Oude and Bihar. He has, for example,
-                  a magnificent temple at Ramesvaram, notable for its 17th
-                  century CE columned corridor. In addition, the Ramanandis
-                  are the largest and perhaps strictest Vaishnava monastic
-                  order. Rama is also considered by some Buddhists to be an
-                  avatar of Buddha, and sculptures of the hero sometimes
-                  appears on the exterior of Buddhist temples. In art Rama is
-                  always youthful and typically has green or blue skin, holds
-                  a bow and arrows, and wears a yellow robe. He is most often
-                  seen with Sita, Laksmana, and Hanuman – collectively known
-                  as Rama's family or Rama Parivara. Episodes from the
-                  Ramayana are especially popular in Hindu sculpture, wall
-                  paintings, and art in general, most of all forest scenes
-                  with Rama hunting the deer and the epic battle with Ravana.
+                  Lord Rama, the epitome of virtue and righteousness, was born to Queen Kausalya. His birth is celebrated as a significant event in Hindu mythology, marking the incarnation of the divine on Earth. His brothers—Bharata, Lakshmana, and Shatrughna—were also born around the same time, each destined to play crucial roles in the epic saga of the Ramayana.
                 </p>
+              </div>
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">
+                  Shringi Rishi's Curse:
+                </h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  The curse of Shringi Rishi was a pivotal moment that influenced the course of Lord Rama's life. The young sage's curse, provoked by Manthara's scheming, foretold the pain of separation and turmoil that would afflict Dasharatha's lineage. This curse eventually became intertwined with the events leading to Rama's exile and the subsequent unfolding of the Ramayana narrative.
+                </p>
+              </div>
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">
+                  Impacts:
+                </h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  In Hindu tradition, the birth and life of Lord Rama are not only revered for their mythological significance but also cherished for the profound moral lessons and ideals they embody. The Ramayana, recounting Rama's journey, continues to inspire countless generations with its themes of duty, devotion, and the eternal battle between good and evil.                </p>
               </div>
 
               <!-- Other sections of the text go here -->
             </div>
           </div>
           <div class="modal-content-right">
-            <img src="images/characters/Rama.jpeg">
+            <img src="images/characters/ram.jpg">
           </div>
         </div>
         <div class="modal-footer">
@@ -306,72 +285,37 @@
                 </p>
               </div>
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">Family</h2>
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Creation of Rakshasas and Yakshas:</h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  Ravana was a terrible demon (raksasa) who was the king of all demons and of the fortress island of
-                  Lanka (modern-day Sri Lanka). His father was Visravas (son of Pulastya, one of the creator Prajapati)
-                  and his mother Nikasa, also a demon and mother of the cannibal demons, the Pisitasanas. Ravana
-                  acquired his throne through foul means when he expelled his half-brother Kubera, god of wealth, from
-                  the island. Ravana had many sons, notably Aksa, who had three heads, symbolic of the three stages of
-                  fever (heat, cold, and sweating), and Indrajit (aka Meghanada), who could make himself invisible.
+                  In the beginning, after Lord Brahma formed the universe, he created two distinct entities to serve specific roles. The Rakshasas, or demons, were tasked with protecting the universe, while the Yakshas, or spirits, were meant to pray for its well-being. Among the Rakshasas, two brothers stood out prominently: Heti and Praheti. While Praheti chose the path of righteousness and pursued meditation, Heti ventured into family life by marrying Bhaya, the sister of Kaal. Their lineage eventually led to the birth of Vidyut Kesha, who later married Balakantaka, setting the stage for the next generations of Rakshasas.</p>
+              </div>
+              <div style="margin-bottom: 30px">
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Sukesh's Boon and Lineage:</h2>
+                <p style="font-size: 16px; line-height: 1.6; color: white">
+                  One significant event in the Rakshasa lineage occurred with the birth of Sukesh. Abandoned in a forest and left unattended, Sukesh was discovered by Lord Shiva and Parvati during their celestial travels. Moved by compassion, Parvati's heart melted upon seeing the baby's distress, prompting Lord Shiva to grant Sukesh the boon of eternal life. Additionally, Parvati blessed all female Rakshasas with the power to have their sons mature into teenagers immediately upon birth. Sukesh later married Devvati, and together they had three sons: Malyavan, Mali, and Sumali, who became pivotal figures in Rakshasa history.
                 </p>
               </div>
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">Ravana & Nandisa</h2>
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Rise of Malyavan, Mali, and Sumali:</h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  The Ramayana is the oldest Sanskrit epic and was written sometime in the 5th century BCE, with some
-                  later additions. Ravana's name is explained, therein, in a colourful myth where the demon-king
-                  challenges Nandisa (actually the great god Shiva and also known as Nandisvara) and comes off worse.
-                  According to the story, one day Ravana met a dark dwarf with a monkey face while he was passing
-                  through the mountains of Saravana. The dwarf would not let Ravana pass because his master Shiva was
-                  busy hunting there and was not to be disturbed. Ravana questioned who this Shiva was and shook the
-                  mountain in rage. This disturbed Shiva and his wife Parvati; the latter trembled with fear as they sat
-                  upon the shaking peak, but Shiva calmly placed his toe upon the ground and the whole mountain fell on
-                  top of Ravana's many arms. The demon let out such a shuddering cry of pain that Shiva named the demon
-                  Ravana after his cry (rava). Ravana was only released from his predicament after 1,000 years of
-                  pleading to the great god.
+                  The three sons of Sukesh—Malyavan, Mali, and Sumali—embarked on a path of intense devotion and penance, seeking boons and divine blessings to enhance their power. Through years of dedicated worship, they gained immense strength and prowess, becoming feared throughout the universe for their terrorizing ways. Their increasing influence disrupted the harmony between Devas (celestial beings) and Rakshasas, leading to confrontations and conflicts that threatened the cosmic balance.
                 </p>
               </div>
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">Rama & Surpanakha</h2>
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Birth of Kaiksi and Rishi Vishwa's Prophetic Insight:</h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  The Ramayana is really concerned with the story of the semi-divine Lord Rama, believed by many Hindus
-                  to be based on a historical figure. He is perhaps the most virtuous figure in all of Hindu mythology.
-                  His adventures illustrate above all the importance and rewards of fulfilling one's pious duty or
-                  dharma, and he had been born for one specific task – to answer the call of the gods and kill the
-                  fearsome multi-headed demon Ravana, terror of the earth.
-                  Rama's troubles began when he was exiled from his father's kingdom, a victim of a conspiracy concocted
-                  by his mother's jealous hunchback slave, Manthara. On top of that, his brother Bharata was made heir
-                  in Rama's place. For 14 years, Rama had to wander the earth, visit sages, and wait to fulfil his
-                  destiny.
-                  Rama, his wife Sita, and great friend Laksmana one day eventually ended up at Pancavati along the
-                  river Godavari, an area plagued by demons. One in particular, Surpanakha, the sister of Ravana, fell
-                  in love with Rama, and when her advances were resisted, she attacked Sita in revenge. Laksmana was the
-                  first to react and cut off the ears and nose of Surpanakha. Not best pleased with this treatment, the
-                  enraged demoness gathered an army of demons to attack the trio. In an epic battle, Rama defeated them
-                  all; however, Surpanakha was not finished with the matter, and she persuaded Ravana that Sita was a
-                  girl worth fighting for. Accordingly, the demon king sought out Rama's home, and while Rama was
-                  distracted in the hunt for a deer (who was actually Ravana's magician Maricha in disguise), abducted
-                  Sita, taking her back to Lanka in his aerial chariot to be kept captive in the beautiful Ashoka garden
-                  of his palace.
+                  Sumali's lineage continued with the birth of his daughter, Kaiksi. Aware of her family's ambitions and desire for power, Kaiksi married Rishi Vishwa's son with the hope of bearing mighty offspring who would restore Rakshasa dominance. However, Rishi Vishwa, possessing prophetic insight into Kaiksi's intentions, granted her children under a specific condition. He foresaw that the children would inherit traits based on Kaiksi's underlying intentions, setting the stage for the birth of Dashgriva (Ravana), Kumbhakarna, Shurpanakha, and Vibhishana—the legendary siblings whose destinies would shape the course of history.
                 </p>
               </div>
               <div style="margin-bottom: 30px">
-                <h2 style="font-size: 24px; color: white">Ravana in Hindu Art</h2>
+                <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Emergence of Ravana:</h2>
                 <p style="font-size: 16px; line-height: 1.6; color: white">
-                  Ravana is usually depicted as multi-headed and multi-armed, carrying all manner of lethal weapons. He
-                  appears in the decorative sculpture of Hindu temples, most often in battle scenes with Rama or riding
-                  his winged chariot. In a celebrated relief scene on the 8th-century CE Kailasanatha temple at Ellora,
-                  Ravana is shown shaking the sacred Kailasa mountain (as in the Nandisa story) on which sit Shiva and
-                  Parvati. Unusually, Ravana is carved completely in the round. Scenes from the Ramayana involving
-                  Ravana were also very popular from the 16th century CE in Indian watercolours, especially esteemed are
-                  those from Udaipur and the Pahari paintings.
-                </p>
+                  Dashgriva, named Ravana by Lord Shiva himself, was the epitome of Rakshasa power and ambition. Born from Kaiksi's union with Rishi Vishwa, Ravana possessed unparalleled strength and intellect, destined to leave an indelible mark on the world. His story intertwines with profound themes of destiny, power, and the eternal struggle between righteousness and malevolence, as depicted in the timeless epic of the Ramayana.</p>
               </div>
             </div>
           </div>
           <div class="modal-content-right">
-            <img src="images/characters/ravana_origin.jpg">
+            <img src="images/characters/ravan1.jpeg">
           </div>
         </div>
         <div class="modal-footer">
@@ -390,7 +334,74 @@
           <button class="modal-close">Close Modal</button>
         </div>
       </div>
+    </div>    
+    <div class="modal" id="modal6">
+      <div class="modal-content">
+        <div class="modal-header">
+          Reference Stories
+          <!-- POMPOM -->
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="referencestory-cards"></div>
+        <div class="modal-footer">
+          <button class="modal-close">Close Modal</button>
+        </div>
+      </div>
     </div>
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <div class="modal-header">
+          Summary
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body custom-popup">
+          <div class="modal-content-left">
+            <div>
+              <h1>Summary of the Ramayana</h1>
+              <p>The Ramayana, one of the two great epics of India, narrates the story of Rama, the prince of Ayodhya. Composed by the sage Valmiki, the epic encompasses the virtues of honor, bravery, and devotion.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Birth and Education</h2>
+              <p>Rama, the eldest son of King Dasharatha, is born under auspicious signs, fulfilling the king's desire for heirs. Alongside his brothers Lakshmana, Bharata, and Shatrughna, Rama receives a princely education, mastering various arts and sciences under sage Vashistha.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Marriage to Sita</h2>
+              <p>Rama, known for his courage and virtue, wins the hand of Sita, the daughter of King Janaka, by successfully stringing the divine bow at her swayamvara, a ceremony attended by many princes.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Exile to the Forest</h2>
+              <p>Due to palace intrigue instigated by his stepmother Kaikeyi, Rama is exiled to the forest for fourteen years. Devotedly, Sita and his faithful brother Lakshmana join him, and they lead a life of simplicity and virtue among the sages and forest dwellers.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Abduction of Sita</h2>
+              <p>Sita is abducted by Ravana, the ten-headed king of Lanka, prompting Rama and Lakshmana to embark on a quest to rescue her. During their journey, they form alliances with the monkey king Sugriva and his minister Hanuman, who becomes a devoted follower of Rama.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Building the Bridge</h2>
+              <p>With the help of the monkey army, Rama constructs a bridge over the ocean to Lanka. This monumental effort symbolizes the power of unity and perseverance.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">The Great Battle</h2>
+              <p>In Lanka, a great battle ensues between Rama’s forces and the armies of Ravana. After many fierce battles and the strategic brilliance of Rama’s allies, Ravana is slain, and Sita is freed.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Return to Ayodhya</h2>
+              <p>Upon completing his exile, Rama returns to Ayodhya where he is crowned king. His reign, known as Ram Rajya, is marked by peace, prosperity, and justice—a golden age for all his subjects.</p>
+              <br>
+              <h2 style="font-size: 24px; color: rgb(240, 100, 6)">Legacy</h2>
+              <p>The Ramayana not only explores the trials and triumphs of its divine hero, Rama, but also offers lessons on dharma (righteousness), devotion, and the duties of relationships, providing a moral foundation for millions of believers.</p>
+          </div>
+          
+          </div>
+          <div class="modal-content-right">
+            <img src="images/kanda/image.png">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-close">Close Modal</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
   </div>
   <footer>
     <div id="footer-sidebar">
@@ -402,7 +413,7 @@
         <button class="footer-button" id="kiskindha-button">Kishkindha</button>
         <button class="footer-button" id="sundara-button">Sundara</button>
         <button class="footer-button" id="yuddha-button">Yuddha</button>
-        <button class="footer-button" id="uttara-button">Uttara</button>
+        <!-- <button class="footer-button" id="uttara-button">Uttara</button> -->
       </div>
     </div>
   </footer>
@@ -543,7 +554,7 @@
         document.getElementById("footer-sidebar").classList.toggle("active");
       });
   </script>
-  <script src="./src/js/dropDown.js"></script>
+  <script type = "module" src="./src/js/dropDown.js"></script>
   <div class="modal" id="">
     <div class="modal-content">
       <div class="modal-header">
@@ -551,11 +562,7 @@
         <button class="modal-close">×</button>
       </div>
       <div class="modal-body">
-        <!-- Modal content will be dynamically loaded here -->
       </div>
-      <!-- <div class="modal-footer">
-        <button class="modal-close">Close</button>
-      </div> -->
     </div>
   </div>
 </body>

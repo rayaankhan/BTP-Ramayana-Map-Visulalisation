@@ -27,7 +27,7 @@ const map = initializeMap();
 
 getData(data_path).then((pointsData) => {
   getData(location_file_path).then((location_data) => {
-    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color);
+    const arrows = createCirclesAndArrowsWithList(map, pointsData.points, location_data, marker_color,1);
   });
 });
 
