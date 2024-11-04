@@ -1,0 +1,20 @@
+{
+    "points": [ 
+        { "no": 1, "location": "dandakaforest", "topic": "Arrival of Rama,Sita and Laskshmana", "content": "they accompanied by sage vishwamitra who seeks rama's help in protecting his yajna (sacrificial ritual) from demons" },
+        { "no": 2, "location": "dandakaforest", "topic": "Encounter with Tataka", "content": "rama encounters the demoness tataka in forest,  with vishwamitra's guidance, rama succesfully eliminates tataka, freeing the forest from her menace" },
+        { "no": 3, "location": "dandakaforest", "topic": "Arrival at the Hermitage of Sage Sutikshna", "content": "rama, sita and lakshmana reach the hermitage of sage sutikshna"},
+        { "no": 4, "location":  "dandakaforest", "topic":"Sage Shabala's story", "content": "sage shabala narrates her story and seeks ravana's help,  rama promises to protect and hermitage her"},
+        { "no": 5, "location":  "dandakaforest", "topic":"Encounter with Viradha", "content": "the trio encounters the demon viradha, rama defeats viradha who was once a celestial being cursed to live as demon"},
+        { "no": 6, "location":  "panchavati", "topic":"Arrival at Panchavati", "content": "rama,sita and lakshmana settle in picturesque panchavati,  build a simple hermitage"},
+        { "no": 7, "location":  "panchavati", "topic":"Surpanakhas Encounter", "content": "surpanakha encounters rama and is attracted to him, she expresses her desire for rama leading to the disfigurement of here nose and ears by lakshmana"},
+        { "no": 8, "location":  "kharaterritory", "topic":"Khara and Dushana's Attack", "content": "khara and dushana demon siblings and relatives of surpanakha attacks rama's hermitage,  rama defeats them in battle"},
+        { "no": 9, "location":  "dandakaforest", "topic":"Surpanakhas Revenge", "content": "surpanakha seeks revenge and approaches ravana, describing the beauty of sita and instigating him to abduct her"},
+        { "no": 10, "location": "janasthana", "topic": "Janasthana", "content": "rama defeats khara and his demon army in the vicinity of janasthana" },
+        { "no": 11, "location": "panchavati", "topic":"Abduction of Sita", "content": "ravana the demon king, disguied as a mendicant, abducts sita in the absence of rama and lakshmana"},
+        { "no": 12, "location": "lepakshi", "topic":"Jatayu's heroic effort", "content": "the vulture witness sita's abduction and valiantly tries to rescue her but is defeated by ravana"},
+        { "no": 13, "location": "pampariver", "topic":"Rama's Search for Sita", "content": "rama and lakshmana upon their return discover sita's abduction,  they began their search for sita crossing the pampa river"},
+        { "no": 14, "location": "rishyamukhaparvat", "topic":"Encounter wiht Shabari", "content": "rama and lakshmana meet shabari an elderly ascetic woman who offers them hospitality"},
+        { "no": 15, "location": "kishkindha", "topic":"Hanuman's Introduction", "content": "hanuman the mighty monkey warrior and devotee of lord rama is introduced in aryanakanda"}
+
+    ]
+}

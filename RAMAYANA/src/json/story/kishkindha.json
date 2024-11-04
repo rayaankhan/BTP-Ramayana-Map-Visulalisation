@@ -1,0 +1,17 @@
+{
+    "points": [
+        { "no": 1, "location": "kishkindha", "topic": "Search for Sita", "content": "rama and lakshmana continue their search for sita, reaching the region of kishkindha" },
+        { "no": 2, "location": "kishkindha", "topic": "Introduction of Sugriva and Vali", "content": "sugriva is introduced as the excited monkey king, and vali his elder brother current ruler of kishkindha" },
+        { "no": 3, "location": "matanga", "topic": "Cave of Matanga", "content": "matanga's hermitage is a cave where sugriva initially hides from vali, sugriva later establishes his bases in their cave after forming an alliance with rama" },
+        { "no": 4, "location": "kishkindha", "topic": "Sugriva's Alliance with Rama", "content": "sugriva promises to help rama find sita in return for ravana's assistance in reclaming the throne from vali"},
+        { "no": 5, "location":  "panchavati", "topic": "Vali's Defeat by Rama", "content": "rama challenges vali to a duel, with vali's son angada's help rama defeats nali and sugriva becomes the king of kishkindha"},
+        { "no": 6, "location":  "rishyamukhaparvat", "topic": "Hanumans Introduction", "content": "hanuman is a devoted follower of sugriva, is introduced, key figure to search for sita"},
+        { "no": 7, "location":  "srilanka", "topic": "Hanuman's Leap to Lanka", "content": "hanuman crosses the ocean in a giant leap reaching lanka in search of sita, he finds sita in ashoka vatika(garden of vatika)"},
+        { "no": 8, "location":  "srilanka", "topic": "Burning of Lanka' with Tail", "content": "hanuman's sets fire to lanka using his burning tail after exploring the city, he returns to rama with information about the sita's whereabouts"},
+        { "no": 9, "location":  "ramsetu", "topic": "building the ramasetu(adam's bridge)", "content": "rama decides to build a bridge to lanka, the army of monkeys and bears construct the rama setu. a bridge of stones to cross the ocean"},
+        { "no": 10, "location":  "ramsetu", "topic": "alliance with vanara and bear armies", "content": "various monkey and bear commanders including sugriva,hanuman,angada,jambavan,nala and neela gather for the expedition to lanka"},
+        { "no": 11, "location": "srilanka", "topic": "Reaching Lanka", "content": "rama's army led by the monkey and bear forces reaches lanka through rama setu"},
+        { "no": 12, "location": "srilanka", "topic": "Siege of Lanka", "content": "the siege of lanka begins with intense battle between rama's forces and ravana's army"},
+        { "no": 13, "location": "srilanka", "topic": "Siege of Lanka", "content": "the siege of lanka begins with intense battle between rama's forces and ravana's army"}
+    ]
+}
